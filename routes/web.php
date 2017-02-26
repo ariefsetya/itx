@@ -22,3 +22,5 @@ Route::get('/rute/{status}', 'HomeController@rute')->name('rute');
 Route::get('/rute/{status}/{id}', 'HomeController@rute_detail')->name('rute_detail');
 Route::get('/objek/{status}', 'HomeController@objek')->name('objek');
 Route::get('/objek/{status}/{id}', 'HomeController@objek_detail')->name('objek_detail');
+
+Route::post('/user/login','HomeController@login');

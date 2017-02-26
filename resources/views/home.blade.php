@@ -125,6 +125,7 @@
 			<hr>
 				<form method="POST" action="{{url('user/login')}}" id="login_form">		
 				<input type="hidden" name="_token_" id="_token_">		
+				<input type="hidden" name="code" id="code">		
 				{{csrf_field()}}
 					<a class="button primary" onclick="phone_btn_onclick()">Klik untuk Masuk</a>
 				</form>
@@ -158,8 +159,6 @@
   // login callback
   function loginCallback(response) {
     console.log(response);
-    alert(response);
-    return;
     if (response.status === "PARTIALLY_AUTHENTICATED") {
       document.getElementById("code").value = response.code;
       document.getElementById("_token_").value = response.state;
@@ -178,10 +177,8 @@
   // phone form submission handler
   function phone_btn_onclick() {
     var country_code = "+62";
-    var ph_num = document.getElementById("phone_login").value;
-    ph_num = ph_num.replace('+62','');
     AccountKit.login('PHONE', 
-      {countryCode: country_code, phoneNumber: ph_num}, // will use default values if this is not specified
+      {countryCode: country_code, phoneNumber: ''}, // will use default values if this is not specified
       loginCallback);
   }
 </script>
