@@ -156,7 +156,7 @@
     AccountKit.init(
       {
         appId:1738905326439099, 
-        state:"0ee937992d8217b6655d8299d4f05d3e", 
+        state:"{{csrf_token()}}", 
         version:"v1.1"
       }
     );
