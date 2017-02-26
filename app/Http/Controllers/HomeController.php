@@ -50,22 +50,36 @@ class HomeController extends Controller
     {
         $code = $r->input('code');
 
-        $s = curl_init();
-        curl_setopt($s,CURLOPT_URL,'https://graph.accountkit.com/v1.1/access_token?grant_type=authorization_code&code='.$code.'&access_token=AA|1738905326439099|8915d427247f663421c900f4cb25df0f');
-        curl_setopt($s,CURLOPT_RETURNTRANSFER,true); 
-        curl_setopt($s,CURLOPT_CUSTOMREQUEST,"GET"); 
-        $response = curl_exec($s);
-        curl_close($s);
+        $curl = new \Curl\Curl();
+        $curl->get('https://graph.accountkit.com/v1.1/access_token',array(
+            'grant_type' => 'authorization_code',
+            'code' => $code,
+            'access_token' => 'AA|1738905326439099|8915d427247f663421c900f4cb25df0f'
+        ));
+        
+        if ($curl->error) {
+            echo $curl->error_code;
+        }
+        else {
+            $response = $curl->response;
+        }
 
         $decoded_json = json_decode($response);
         $access_token = $decoded_json->access_token;
 
-        $s = curl_init();
-        curl_setopt($s,CURLOPT_URL,'https://graph.accountkit.com/v1.1/me?access_token='.$access_token);
-        curl_setopt($s,CURLOPT_RETURNTRANSFER,true); 
-        curl_setopt($s,CURLOPT_CUSTOMREQUEST,"GET"); 
-        $response = curl_exec($s);
-        curl_close($s);
+
+
+        $curl = new \Curl\Curl();
+        $curl->get('https://graph.accountkit.com/v1.1/me',array(
+            'access_token' => $access_token,
+        ));
+        
+        if ($curl->error) {
+            echo $curl->error_code;
+        }
+        else {
+            $response = $curl->response;
+        }
 
         var_dump($response);
 
