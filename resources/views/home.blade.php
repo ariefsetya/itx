@@ -123,6 +123,7 @@
 			<div class="cell">
 			<h1>Masuk ke Member Area</h1>
 			<hr>
+			
 				<form method="POST" action="{{url('user/login')}}" id="login_form">		
 				<input type="hidden" name="_token_" id="_token_">		
 				{{csrf_field()}}		
