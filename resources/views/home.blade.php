@@ -125,15 +125,8 @@
 			<hr>
 				<form method="POST" action="{{url('user/login')}}" id="login_form">		
 				<input type="hidden" name="_token_" id="_token_">		
-				{{csrf_field()}}		
-					<div class="input-control modern text full-size">
-					    <input type="text" name="phone" id="phone_login" required>
-					    <input type="hidden" name="code" id="code" required>
-					    <span class="label">Your Phone (ex: +6283870002220)</span>
-					    <span class="informer">Please enter your phone</span>
-					    <span class="placeholder">Phone</span>
-					</div>
-					<a class="button primary" onclick="phone_btn_onclick()">Submit</a>
+				{{csrf_field()}}
+					<a class="button primary" onclick="phone_btn_onclick()">Klik untuk Masuk</a>
 				</form>
 			</div>
 		</div>
