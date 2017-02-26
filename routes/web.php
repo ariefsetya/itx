@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/lokomotif/{lokomotif}', 'HomeController@lokomotif')->name('lokomotif');
 Route::get('/lokomotif/{lokomotif}/{id}/{seri}', 'HomeController@lokomotif_detail')->name('lokomotif_detail');
 Route::get('/kereta/{kereta}', 'HomeController@kereta')->name('kereta');
@@ -24,3 +24,5 @@ Route::get('/objek/{status}', 'HomeController@objek')->name('objek');
 Route::get('/objek/{status}/{id}', 'HomeController@objek_detail')->name('objek_detail');
 
 Route::post('/user/login','HomeController@login');
+Route::post('/user/request','HomeController@request');
+Route::get('/member','HomeController@member')->name('member');

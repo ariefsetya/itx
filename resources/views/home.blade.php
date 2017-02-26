@@ -1,6 +1,44 @@
 @extends('local')
 
 @section('content')
+
+@if (count($errors) > 0)
+<script type="text/javascript">
+	$.Dialog({
+    title: "Failed to Register",
+    content: "<ul> @foreach ($errors->all() as $error) <li> {{ $error }} </li> @endforeach </ul>",
+    actions: [
+        {
+            title: "OK",
+            onclick: function(el){
+                $(el).data('dialog').close();
+            }
+        }
+    ],
+    options: {
+    }
+});
+</script>
+@endif
+@if (session('msg'))
+<script type="text/javascript">
+	$.Dialog({
+    title: "Register Success",
+    content: "{{session('msg')}}",
+    actions: [
+        {
+            title: "OK",
+            onclick: function(el){
+                $(el).data('dialog').close();
+            }
+        }
+    ],
+    options: {
+    }
+});
+</script>
+@endif
+
 <h1>Siapakah kami?</h1>
 <p>Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator) yang berbasis di Jakarta. Kami sendiri juga menyediakan beberapa konten kreasi kami yang bisa di download pada setiap detail addons yang bersifat Freeware.</p>
 <p>Website ini bersifat Portal-based, yaitu creator-creator khusus Kereta Simulator Indonesia (Trainz Simulator) dapat mengupload karyanya serta kami juga menyediakan fitur untuk pengiriman konten ke PLU User masing-masing creator.</p>
@@ -55,8 +93,8 @@
 					    <span class="placeholder">E-Mail</span>
 					</div>
 					<div class="input-control modern text full-size">
-					    <input type="text" name="phone" required>
-					    <span class="label">Your Phone (ex: +6283870002220)</span>
+					    <input type="phone" name="phone" required>
+					    <span class="label">Your Phone (ex: 083870002220)</span>
 					    <span class="informer">Please enter your phone</span>
 					    <span class="placeholder">Phone</span>
 					</div>
@@ -71,7 +109,7 @@
 					    <button class="button"><span class="mif-folder"></span></button>
 					</div>
 					<div class="input-control textarea full-size" data-role="input" data-text-auto-resize="true">
-					    <textarea placeholder="Reason why you want to join us"></textarea>
+					    <textarea name="reason" placeholder="Reason why you want to join us"></textarea>
 					</div>
 					<label class="input-control checkbox full-size">
 					    <input type="checkbox" name="ori">

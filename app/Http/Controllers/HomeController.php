@@ -81,7 +81,46 @@ class HomeController extends Controller
             $response = $curl->response;
         }
 
+        $decoded_json = json_decode($response);
+        $phone = "0".$decoded_json->phone->national_number;
+
+        $a = \App\User::where('phone',$phone)->get();
+        if(sizeof($a)>0){
+            Auth::loginUsingId($a[0]->id, true);
+
+            return redirect()->route('member');
+        }else{
+            return redirect()->route('home')->with(array('msg'=>'Login Failed, your phone number is not registered','title'=>'Login Failed'));
+        }
+
         var_dump($response);
 
+    }
+    public function request(Request $r)
+    {
+        $this->validate($r,[
+            'email' => 'required|email|unique:users',
+            'phone' => 'required|regex:/(08)[0-9]{9}/|unique:users',
+            ]);
+
+        $s = new \App\User;
+        $s->name = $r->name;
+        $s->email = $r->email;
+        $s->phone = $r->phone;
+        $s->fb = $r->fb;
+        $s->photo = "";
+        $s->reason = $r->reason;
+        $ts['2009'] = isset($r->tsver_2009)?"Ya":"Tidak";
+        $ts['2010'] = isset($r->tsver_2010)?"Ya":"Tidak";
+        $ts['2012'] = isset($r->tsver_2012)?"Ya":"Tidak";
+        $ts['TANE'] = isset($r->tsver_tane)?"Ya":"Tidak";
+        $s->ori = isset($r->ori)?1:0;
+        $s->tsver = json_encode($ts);
+        $s->brand = trim($r->brand)!=""?$r->brand:"";
+        $s->url = trim($r->url)!=""?$r->url:"";
+        $s->password = bcrypt('admin');
+        $s->save();
+
+        return redirect()->route('home')->with(array('msg'=>'Register Success, please wait until we approve your account ;)','title'=>'Register Success'));
     }
 }
