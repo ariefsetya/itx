@@ -94,8 +94,6 @@ class HomeController extends Controller
             return redirect()->route('home')->with(array('msg'=>'Login Failed, your phone number is not registered','title'=>'Login Failed'));
         }
 
-        var_dump($response);
-
     }
     public function request(Request $r)
     {
@@ -124,4 +122,17 @@ class HomeController extends Controller
 
         return redirect()->route('home')->with(array('msg'=>'Register Success, please wait until we approve your account ;)','title'=>'Register Success'));
     }
+
+    public function member()
+    {
+        echo "<pre>".print_r(Auth::user(),1)."</pre>";
+    }
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect()->route('home')->with(array('msg'=>'Logout Success, see you again :)','title'=>'Logout Success'));
+
+    }
+
 }

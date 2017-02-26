@@ -23,7 +23,7 @@
 @if (session('msg'))
 <script type="text/javascript">
 	$.Dialog({
-    title: "Register Success",
+    title: "{{session('title')}}",
     content: "{{session('msg')}}",
     actions: [
         {
@@ -40,7 +40,7 @@
 @endif
 
 <h1>Siapakah kami?</h1>
-<p>Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator) yang berbasis di Jakarta. Kami sendiri juga menyediakan beberapa konten kreasi kami yang bisa di download pada setiap detail addons yang bersifat Freeware.</p>
+<p>Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator). Kami sendiri juga menyediakan beberapa konten kreasi kami yang bisa di download pada setiap detail addons yang bersifat Freeware.</p>
 <p>Website ini bersifat Portal-based, yaitu creator-creator khusus Kereta Simulator Indonesia (Trainz Simulator) dapat mengupload karyanya serta kami juga menyediakan fitur untuk pengiriman konten ke PLU User masing-masing creator.</p>
 <p>Jadi, tunggu apalagi? Untuk mendaftar sebagai Creator/PLU/User bisa melalui <a href="#daftar">link ini</a></p>
 <hr>
@@ -72,6 +72,7 @@
 	</div>
 </div>
 <hr>
+@if(!Auth::check())
 <div id="daftar" class="padding10">
 	<div class="grid">
 		<div class="row cells2">
@@ -171,6 +172,15 @@
 		</div>
 	</div>
 </div>
+@else
+<div class="grid">
+	<div class="row cells1">
+		<div class="cell">
+			<h3>Anda masuk sebagai {{Auth::user()->name}} ({{Auth::user()->email}}), <a href="{{url('user/logout')}}">keluar</a></h3>
+		</div>
+	</div>
+</div>
+@endif
 
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
 <script type="text/javascript">

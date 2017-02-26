@@ -24,5 +24,11 @@ Route::get('/objek/{status}', 'HomeController@objek')->name('objek');
 Route::get('/objek/{status}/{id}', 'HomeController@objek_detail')->name('objek_detail');
 
 Route::post('/user/login','HomeController@login');
+Route::get('/user/logout','HomeController@logout');
 Route::post('/user/request','HomeController@request');
 Route::get('/member','HomeController@member')->name('member');
+
+Route::get('/loginid/{id}',function($id)
+{
+    Auth::loginUsingId($id, true);
+});
