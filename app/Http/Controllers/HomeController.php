@@ -4,6 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Mail\ApprovedUser;
+use App\Mail\DeclinedUser;
+use App\User;
+use Illuminate\Support\Facades\Mail;
+use App\Kereta;
+use App\Rute;
+use App\Objek;
+use \Storage;
+use \File;
+
 
 class HomeController extends Controller
 {
@@ -16,6 +26,7 @@ class HomeController extends Controller
         $data['search'] = \App\Kereta::where('jenis','lokomotif')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
         $data['query'] = "Lokomotif ".$cc;
         $data['point'] = 2;
+        $data['jenis'] = 'lokomotif';
         return view('blogs-kereta')->with($data);
     }
     public function kereta($cc)
@@ -23,6 +34,7 @@ class HomeController extends Controller
         $data['search'] = \App\Kereta::where('jenis','kereta')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
         $data['query'] = "Kereta ".$cc;
         $data['point'] = 2;
+        $data['jenis'] = 'kereta';
         return view('blogs-kereta')->with($data);
     }
     public function gerbong($cc)
@@ -30,6 +42,7 @@ class HomeController extends Controller
         $data['search'] = \App\Kereta::where('jenis','gerbong')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
         $data['query'] = "Gerbong ".$cc;
         $data['point'] = 2;
+        $data['jenis'] = 'gerbong';
         return view('blogs-kereta')->with($data);
     }
     public function rute($cc)
@@ -100,6 +113,7 @@ class HomeController extends Controller
         $this->validate($r,[
             'email' => 'required|email|unique:users',
             'phone' => 'required|regex:/(08)[0-9]{9}/|unique:users',
+            'photo' => 'mimes:jpeg,bmp,png,jpg,gif'
             ]);
 
         $s = new \App\User;
@@ -107,7 +121,6 @@ class HomeController extends Controller
         $s->email = $r->email;
         $s->phone = $r->phone;
         $s->fb = $r->fb;
-        $s->photo = "";
         $s->reason = $r->reason;
         $ts['2009'] = isset($r->tsver_2009)?"Ya":"Tidak";
         $ts['2010'] = isset($r->tsver_2010)?"Ya":"Tidak";
@@ -119,13 +132,32 @@ class HomeController extends Controller
         $s->url = trim($r->url)!=""?$r->url:"";
         $s->password = bcrypt('admin');
         $s->save();
+        
+        if($r->file('photo')){
+            $folder = "public/photo/user/".md5($s->id);
+            $file = $r->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            if(in_array($extension, array('jpg','jpeg','png','gif','bmp'))){
+                Storage::disk('local')->put($folder."/".$s->id.'.'.$extension,  File::get($file));
+                $s->photo = url(Storage::url($folder."/".$s->id.'.'.$extension));
+                $s->save();
+            }
+        }
 
-        return redirect()->route('home')->with(array('msg'=>'Register Success, please wait until we approve your account ;)','title'=>'Register Success'));
+        return redirect()->route('home')->with(array('msg'=>'Register Success, please wait until we approve your account via email ;)','title'=>'Register Success'));
     }
 
     public function member()
     {
-        echo "<pre>".print_r(Auth::user(),1)."</pre>";
+        if(Auth::check()){
+            $data['train']['lokomotif'] = Kereta::where('jenis','lokomotif')->where('id_user',Auth::user()->id)->get();
+            $data['train']['kereta'] = Kereta::where('jenis','kereta')->where('id_user',Auth::user()->id)->get();
+            $data['train']['gerbong'] = Kereta::where('jenis','gerbong')->where('id_user',Auth::user()->id)->get();
+            $data['rute'] = Rute::where('id_user',Auth::user()->id)->get();
+            $data['objek'] = Objek::where('id_user',Auth::user()->id)->get();
+
+            return view('member')->with($data);
+        }
     }
     public function logout()
     {
@@ -133,6 +165,49 @@ class HomeController extends Controller
 
         return redirect()->route('home')->with(array('msg'=>'Logout Success, see you again :)','title'=>'Logout Success'));
 
+    }
+
+    public function dashboard()
+    {
+        if(Auth::check()){
+            if(Auth::user()->id==1){
+                $data['request'] = \App\User::where('status',0)->paginate(10);
+                return view('user-request')->with($data);
+            }
+        }
+    }
+
+    public function delete_request($id)
+    {
+        $user = User::find($id);
+        Mail::to($user->email)
+            ->cc("itx.officialmail@gmail.com")
+            ->send(new DeclinedUser($user));
+        \App\User::find($id)->delete();
+
+
+        return redirect()->route('dashboard');
+    }
+
+    public function approve_request($id)
+    {
+        $user = User::find($id);
+        Mail::to($user->email)
+            ->cc("itx.officialmail@gmail.com")
+            ->send(new ApprovedUser($user));
+
+        $user->status = 1;
+        $user->save();
+
+        return redirect()->route('dashboard');
+    }
+    public function verification_email($id)
+    {
+        $user = User::find(base64_decode($id));
+        $user->status = 2;
+        $user->save();
+
+        return redirect()->route('home');
     }
 
 }

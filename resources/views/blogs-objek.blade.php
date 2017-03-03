@@ -23,24 +23,28 @@
 			        		</tr>
 			        		@if($search[$i+$x]->reskin!=null)
 				        	<tr>
-				        		<td>Creator</td>
-				        		<td>{{$search[$i+$x]->creator}}</td>
+				        		<td>Reskin</td>
+				        		<td>{{$search[$i+$x]->reskin}}</td>
 			        		</tr>
 			        		@endif
 				        	<tr>
-				        		<td>Scale</td>
-				        		<td>{{$search[$i+$x]->realscale==1?"Realscale":"Non-Realscale"}}</td>
-			        		</tr>
-				        	<tr>
 				        		<td>Status</td>
-				        		<td>{{$search[$i+$x]->status}}</td>
+				        		<td>
+				        		@if($search[$i+$x]->status=="plu")
+				        			Private Limited User
+				        		@elseif($search[$i+$x]->status=="free")
+				        			Freeware
+				        		@elseif($search[$i+$x]->status=="pay")
+				        			Payware
+				        		@endif
+				        		</td>
 			        		</tr>
 				        	<tr>
 				        		<td colspan="2">Description<br><br>{{$search[$i+$x]->description or '--No Description--'}}</td>
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="">...Selengkapnya</a>
+				        	<a class="text-right button primary" href="{{route('objek_detail',[$row->id])}}">...Selengkapnya</a>
 				        </div>
 			        </div>
 			    </div>

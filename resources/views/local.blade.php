@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="description" content="Metro, a sleek, intuitive, and powerful framework for faster and easier web development for Windows Metro Style.">
-        <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development">
-        <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
+        <meta name="description" content="Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator). Kami sendiri juga menyediakan beberapa konten kreasi kami yang bisa di download pada setiap detail addons yang dengan status Freeware.">
+        <meta name="keywords" content="ITX, Indonesian Trainz X, Trainz Portal, Trainz Simulator">
+        <meta name="author" content="Indonesian Trainz X">
 
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-        <title>Appbar :: Metro UI CSS - The front-end framework for developing projects on the web in Windows Metro Style</title>
+        <title>Indonesian Trainz X</title>
 
         <link href="{{Storage::url('css/metro.css')}}" rel="stylesheet">
         <link href="{{Storage::url('css/metro-icons.css')}}" rel="stylesheet">

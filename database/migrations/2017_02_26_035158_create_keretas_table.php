@@ -15,6 +15,7 @@ class CreateKeretasTable extends Migration
     {
         Schema::create('keretas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
             $table->string('nama');
             $table->string('seri');
             $table->integer('realscale');
@@ -24,7 +25,6 @@ class CreateKeretasTable extends Migration
             $table->string('creator');
             $table->string('reskin')->nullable();
             $table->text('description')->nullable();
-            $table->string('versi');
             $table->text('kuid');
             $table->string('status');
             $table->integer('open');

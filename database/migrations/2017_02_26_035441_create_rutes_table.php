@@ -15,14 +15,12 @@ class CreateRutesTable extends Migration
     {
         Schema::create('rutes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
             $table->string('nama');
-            $table->string('stasiun');
-            $table->integer('fiksi');
             $table->integer('realscale');
             $table->string('photo');
             $table->string('creator');
             $table->text('description');
-            $table->string('versi');
             $table->text('kuid');
             $table->string('status');
             $table->integer('open');

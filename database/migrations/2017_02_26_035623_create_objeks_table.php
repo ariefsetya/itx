@@ -15,14 +15,12 @@ class CreateObjeksTable extends Migration
     {
         Schema::create('objeks', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
             $table->string('nama');
-            $table->integer('fiksi');
-            $table->integer('realscale');
             $table->string('photo');
             $table->string('creator');
             $table->string('reskin');
             $table->text('description');
-            $table->string('versi');
             $table->text('kuid');
             $table->string('status');
             $table->integer('open');

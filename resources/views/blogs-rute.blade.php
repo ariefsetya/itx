@@ -18,10 +18,6 @@
 				        <hr>
 				        <table class="table striped hovered bordered">
 				        	<tr>
-				        		<td>Stasiun</td>
-				        		<td>{{$search[$i+$x]->stasiun}}</td>
-				        	</tr>
-				        	<tr>
 				        		<td>Creator</td>
 				        		<td>{{$search[$i+$x]->creator}}</td>
 			        		</tr>
@@ -31,14 +27,22 @@
 			        		</tr>
 				        	<tr>
 				        		<td>Status</td>
-				        		<td>{{$search[$i+$x]->status}}</td>
+				        		<td>
+				        		@if($search[$i+$x]->status=="plu")
+				        			Private Limited User
+				        		@elseif($search[$i+$x]->status=="free")
+				        			Freeware
+				        		@elseif($search[$i+$x]->status=="pay")
+				        			Payware
+				        		@endif
+				        		</td>
 			        		</tr>
 				        	<tr>
 				        		<td colspan="2">Description<br><br>{{$search[$i+$x]->description or '--No Description--'}}</td>
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="">...Selengkapnya</a>
+				        	<a class="text-right button primary" href="{{route('rute_detail',[$row->id])}}">...Selengkapnya</a>
 				        </div>
 			        </div>
 			    </div>

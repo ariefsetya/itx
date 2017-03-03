@@ -13,11 +13,11 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/lokomotif/{lokomotif}', 'HomeController@lokomotif')->name('lokomotif');
-Route::get('/lokomotif/{lokomotif}/{id}/{seri}', 'HomeController@lokomotif_detail')->name('lokomotif_detail');
+Route::get('/lokomotif/{lokomotif}/{id}', 'HomeController@lokomotif_detail')->name('lokomotif_detail');
 Route::get('/kereta/{kereta}', 'HomeController@kereta')->name('kereta');
-Route::get('/kereta/{kereta}/{id}/{seri}', 'HomeController@kereta_detail')->name('kereta_detail');
+Route::get('/kereta/{kereta}/{id}', 'HomeController@kereta_detail')->name('kereta_detail');
 Route::get('/gerbong/{gerbong}', 'HomeController@gerbong')->name('gerbong');
-Route::get('/gerbong/{gerbong}/{id}/{seri}', 'HomeController@gerbong_detail')->name('gerbong_detail');
+Route::get('/gerbong/{gerbong}/{id}', 'HomeController@gerbong_detail')->name('gerbong_detail');
 Route::get('/rute/{status}', 'HomeController@rute')->name('rute');
 Route::get('/rute/{status}/{id}', 'HomeController@rute_detail')->name('rute_detail');
 Route::get('/objek/{status}', 'HomeController@objek')->name('objek');
@@ -27,6 +27,20 @@ Route::post('/user/login','HomeController@login');
 Route::get('/user/logout','HomeController@logout');
 Route::post('/user/request','HomeController@request');
 Route::get('/member','HomeController@member')->name('member');
+
+Route::get('/anonymousx','HomeController@dashboard')->name('dashboard');
+Route::get('/verification/email/{id}','HomeController@verification_email')->name('verification_email');
+Route::get('/approve/{id}','HomeController@approve_request')->name('approve_request');
+Route::get('/delete/{id}','HomeController@delete_request')->name('delete_request');
+Route::get('/delete_train/{id}','MemberController@delete_train')->name('delete_train');
+Route::get('/add_train','MemberController@add_train')->name('add_train');
+Route::post('/save_train','MemberController@save_train')->name('save_train');
+Route::get('/delete_rute/{id}','MemberController@delete_rute')->name('delete_rute');
+Route::get('/add_rute','MemberController@add_rute')->name('add_rute');
+Route::post('/save_rute','MemberController@save_rute')->name('save_rute');
+Route::get('/delete_objek/{id}','MemberController@delete_objek')->name('delete_objek');
+Route::get('/add_objek','MemberController@add_objek')->name('add_objek');
+Route::post('/save_objek','MemberController@save_objek')->name('save_objek');
 
 Route::get('/loginid/{id}',function($id)
 {
