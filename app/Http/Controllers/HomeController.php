@@ -98,7 +98,7 @@ class HomeController extends Controller
         $decoded_json = json_decode($response);
         $phone = "0".$decoded_json->phone->national_number;
 
-        $a = \App\User::where('phone',$phone)->get();
+        $a = \App\User::where('phone',$phone)->where('status','>','1')->get();
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
 
