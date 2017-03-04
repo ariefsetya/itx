@@ -155,17 +155,6 @@
                               </p>
                             </td>
                           </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -210,17 +199,6 @@
                               Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
                             </td>
                           </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -263,17 +241,6 @@
                               Loko : KAI | Free<br>
                               Cons : ITP | Free<br>
                               Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
                             </td>
                           </tr>
                         </tbody>
