@@ -134,7 +134,7 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C130" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
+                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://z-1-scontent-sit4-1.xx.fbcdn.net/v/t31.0-8/16797601_10202793246148034_4780125488409152154_o.jpg?oh=847d517adb2964847f3db865d85885c3&oe=592AFA12" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
                           </tr>
                         </tbody>
                       </table>
@@ -143,11 +143,16 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="368" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Title </span></td>
+                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;">KA Bangunkarta lepas Stasiun Barat</span></td>
                           </tr>
                           <tr>
                             <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
+                                Loko : KAI | Free<br>
+                                Cons : MNA (Free), ITP (Free), BY PWT (Free)<br>
+                                Object : Built-in (Pay), MP7 (Free), BY KAC (Shared), IRC (Free), TPR (Free), TWP (Free), BY JNG (Free), SvtaX (Free), JointedRail (Free), NZR (Free)<br>
+                                Rute : DAOP 7 MN (Walikukun - Barat) | Me | PLU<br>
+                              </p>
                             </td>
                           </tr>
                           <tr>
@@ -186,7 +191,7 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C130" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
+                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://z-1-scontent-sit4-1.xx.fbcdn.net/v/t31.0-8/16602179_10202769334390255_8255526546266544643_o.jpg?oh=51370679fe5bb7dc64344c94cf99c3f0&oe=592D68ED" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
                           </tr>
                         </tbody>
                       </table>
@@ -195,11 +200,14 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="368" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Title </span></td>
+                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> KA Krakatau Double Traksi </span></td>
                           </tr>
                           <tr>
                             <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
+                              Loko : IRC (Free), KAI (Free)<br>
+                              Cons : MNA | Free<br>
+                              Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
                             </td>
                           </tr>
                           <tr>
@@ -238,7 +246,7 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C130" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
+                            <td class="links-color" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto; max-width: 166px;" src="https://z-1-scontent-sit4-1.xx.fbcdn.net/v/t31.0-8/16402944_10202744857418346_5372666433313692764_o.jpg?oh=f9edf7ae893938321ed50f5df9d86903&oe=592F16B0" alt="" width="166" border="0" hspace="0" vspace="0" /></td>
                           </tr>
                         </tbody>
                       </table>
@@ -247,155 +255,14 @@
                       <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="368" cellspacing="9" cellpadding="0" align="left">
                         <tbody>
                           <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Title </span></td>
+                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Tikungan masuk Stasiun Barat </span></td>
                           </tr>
                           <tr>
                             <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <table id="ko_hrBlock_15" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
-    <tbody>
-      <tr>
-        <td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-          <div class="oldwebkit" style="max-width: 570px;">
-            <table class="vb-container halfpad" style="border-collapse: separate; border-spacing: 9px; padding-left: 9px; padding-right: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
-              <tbody>
-                <tr>
-                  <td style="background-color: #ffffff;" align="center" valign="top" bgcolor="#ffffff">
-                    <table style="width: 100%;" border="0" width="100%" cellspacing="0" cellpadding="0">
-                      <tbody>
-                        <tr>
-                          <td style="font-size: 1px; line-height: 1px; width: 100%; background-color: #3f3f3f;" width="100%" height="1">&nbsp;</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <table id="ko_titleBlock_13" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
-    <tbody>
-      <tr>
-        <td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-          <div class="oldwebkit" style="max-width: 570px;">
-            <table class="vb-container halfpad" style="border-collapse: separate; border-spacing: 9px; padding-left: 9px; padding-right: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
-              <tbody>
-                <tr>
-                  <td style="background-color: #ffffff; font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: center;" align="center" bgcolor="#ffffff">Gallery</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <table id="ko_tripleArticleBlock_12" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
-    <tbody>
-      <tr>
-        <td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-          <div class="oldwebkit" style="max-width: 570px;">
-            <table class="vb-row fullpad" style="border-collapse: separate; border-spacing: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
-              <tbody>
-                <tr>
-                  <td class="mobile-row" style="font-size: 0;" align="center" valign="top">
-                    <div class="mobile-full" style="display: inline-block; max-width: 184px; vertical-align: top; width: 100%;">
-                      <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="left">
-                        <tbody>
-                          <tr>
-                            <td class="links-color" style="padding-bottom: 9px;" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C90" alt="" width="166" height="90" border="0" hspace="0" vspace="0" /></td>
-                          </tr>
-                          <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;">Title </span></td>
-                          </tr>
-                          <tr>
-                            <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts.</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="mobile-full" style="display: inline-block; max-width: 184px; vertical-align: top; width: 100%;">
-                      <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="left">
-                        <tbody>
-                          <tr>
-                            <td class="links-color" style="padding-bottom: 9px;" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C90" alt="" width="166" height="90" border="0" hspace="0" vspace="0" /></td>
-                          </tr>
-                          <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Title </span></td>
-                          </tr>
-                          <tr>
-                            <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts.</p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td valign="top">
-                              <table class="mobile-full" style="padding-top: 4px;" border="0" cellspacing="0" cellpadding="0" align="left">
-                                <tbody>
-                                  <tr>
-                                    <td style="font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; color: #3f3f3f; font-weight: normal; padding-left: 18px; padding-right: 18px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="26"><a style="text-decoration: none; color: #3f3f3f; font-weight: normal;" target="_new">BUTTON</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="mobile-full" style="display: inline-block; max-width: 184px; vertical-align: top; width: 100%;">
-                      <table class="vb-content" style="border-collapse: separate; width: 100%;" border="0" width="184" cellspacing="9" cellpadding="0" align="right">
-                        <tbody>
-                          <tr>
-                            <td class="links-color" style="padding-bottom: 9px;" align="left" valign="top" width="100%"><img class="mobile-full" style="border: 0px; display: block; vertical-align: top; width: 100%; height: auto;" src="https://mosaico.io/srv/f-t01742p/img?method=placeholder&amp;params=166%2C90" alt="" width="166" height="90" border="0" hspace="0" vspace="0" /></td>
-                          </tr>
-                          <tr>
-                            <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;"> Title </span></td>
-                          </tr>
-                          <tr>
-                            <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts.</p>
+                              <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
+                              Loko : KAI | Free<br>
+                              Cons : ITP | Free<br>
+                              Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
                             </td>
                           </tr>
                           <tr>
@@ -446,26 +313,7 @@
       </tr>
     </tbody>
   </table>
-  <table id="ko_textBlock_18" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
-    <tbody>
-      <tr>
-        <td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-          <div class="oldwebkit" style="max-width: 570px;">
-            <table class="vb-container fullpad" style="border-collapse: separate; border-spacing: 18px; padding-left: 0; padding-right: 0; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
-              <tbody>
-                <tr>
-                  <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-                    <p style="margin: 1em 0px; margin-top: 0px;">Far far away, behind the word mountains, far from the countries <a style="color: #3f3f3f; text-decoration: underline;">Vokalia and Consonantia</a>, there live the blind texts.</p>
-                    <p style="margin: 1em 0px; margin-bottom: 0px;">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="text-align: center;">Copyright &copy; Indonesian Trainz X 2017. All Rights Reserved.</div>
 </div>
 
 </body>
