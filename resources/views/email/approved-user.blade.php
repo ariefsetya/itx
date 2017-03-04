@@ -267,7 +267,7 @@
                     <table style="width: 100%;" border="0" width="100%" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td style="font-size: 1px; line-height: 1px; width: 100%; background-color: #3f3f3f;" width="100%" height="1">
+                          <td style="width: 100%; background-color: #3f3f3f;" width="100%">
                             <div style="text-align: center;">Copyright &copy; Indonesian Trainz X 2017. All Rights Reserved.</div>
                           </td>
                         </tr>
