@@ -67,7 +67,7 @@
                 <li data-flexorderorigin="3" data-flexorder="4" class="active-container">
                     <a href="#" class="dropdown-toggle">Community</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
-                        <li><a target="_blank" href="https://www.facebook.com/groups/337639216389364/">Indonesian Train Simulator</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/groups/337639216389364/">Indonesian Trainz Simulator</a></li>
                         <li data-flexorderorigin="2" data-flexorder="3" class="">
                             <a href="#" class="dropdown-toggle">Friends List</a>
                             <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
