@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome to Indonesian Trainz X Portal</title>
+  <title>Selamat datang di Indonesian Trainz X</title>
 </head>
 <body style="margin: 0;">
 <div style="text-align: center;">
@@ -29,13 +29,14 @@
                     <table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
                       <tbody>
                         <tr>
-                          <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;">Welcome to Indonesian Trainz X Portal</span></td>
+                          <td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;"><span style="color: #3f3f3f;">Selamat datang di Indonesian Trainz X</span></td>
                         </tr>
                         <tr>
                           <td style="font-size: 1px; line-height: 1px;" height="9">&nbsp;</td>
                         </tr>
                         <tr>
                           <td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
+                            <h3>Halo, {{$user->name}} ({{$user->email}})</h3>
                             <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator). Kami sendiri juga menyediakan beberapa konten kreasi kami yang bisa di download pada setiap detail addons dengan status Freeware.</p>
                             <p>Website ini bersifat Portal-based, yaitu creator-creator khusus Kereta Simulator Indonesia (Trainz Simulator) dapat mengupload karyanya serta kami juga menyediakan fitur untuk pengiriman konten ke PLU User masing-masing creator.</p>
                           </td>
@@ -112,7 +113,7 @@
             <table class="vb-container halfpad" style="border-collapse: separate; border-spacing: 9px; padding-left: 9px; padding-right: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
               <tbody>
                 <tr>
-                  <td style="background-color: #ffffff; font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: center;" align="center" bgcolor="#ffffff">Last Updated Content</td>
+                  <td style="background-color: #ffffff; font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: center;" align="center" bgcolor="#ffffff">Galeri</td>
                 </tr>
               </tbody>
             </table>
@@ -151,7 +152,7 @@
                                 Loko : KAI | Free<br>
                                 Cons : MNA (Free), ITP (Free), BY PWT (Free)<br>
                                 Object : Built-in (Pay), MP7 (Free), BY KAC (Shared), IRC (Free), TPR (Free), TWP (Free), BY JNG (Free), SvtaX (Free), JointedRail (Free), NZR (Free)<br>
-                                Rute : DAOP 7 MN (Walikukun - Barat) | Me | PLU<br>
+                                Rute : DAOP 7 MN (Walikukun - Barat) | PLU<br>
                               </p>
                             </td>
                           </tr>
@@ -196,7 +197,7 @@
                               <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
                               Loko : IRC (Free), KAI (Free)<br>
                               Cons : MNA | Free<br>
-                              Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
+                              Rute : DAOP 7 MN (Walikukun - Barat) | Private</p>
                             </td>
                           </tr>
                         </tbody>
@@ -240,7 +241,7 @@
                               <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
                               Loko : KAI | Free<br>
                               Cons : ITP | Free<br>
-                              Rute : DAOP 7 MN (Walikukun - Barat) | Me | Private</p>
+                              Rute : DAOP 7 MN (Walikukun - Barat) | Private</p>
                             </td>
                           </tr>
                         </tbody>

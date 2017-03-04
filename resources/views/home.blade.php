@@ -106,12 +106,12 @@
 					    <span class="informer">Silahkan isi facebook username</span>
 					    <span class="placeholder">Facebook Username</span>
 					</div>
-					<div class="input-control file full-size" data-role="input">
+					<div class="input-control file full-size" data-role="input" required>
 					    <input type="file" name="photo" placeholder="Foto">
 					    <button class="button"><span class="mif-folder"></span></button>
 					</div>
 					<div class="input-control textarea full-size" data-role="input" data-text-auto-resize="true">
-					    <textarea name="reason" placeholder="Pernyataan untuk tunduk pada aturan Indonesian Trainz X"></textarea>
+					    <textarea name="reason" placeholder="Pernyataan untuk tunduk pada aturan Indonesian Trainz X" required></textarea>
 					</div>
 					<label class="input-control checkbox full-size">
 					    <input type="checkbox" name="ori">
