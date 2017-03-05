@@ -181,7 +181,7 @@ class HomeController extends Controller
     {
         $user = User::find($id);
         Mail::to($user->email)
-            ->cc("itx.officialmail@gmail.com")
+            // ->cc("itx.officialmail@gmail.com")
             ->send(new DeclinedUser($user));
         \App\User::find($id)->delete();
 
@@ -193,7 +193,7 @@ class HomeController extends Controller
     {
         $user = User::find($id);
         Mail::to($user->email)
-            ->cc("itx.officialmail@gmail.com")
+            // ->cc("itx.officialmail@gmail.com")
             ->send(new ApprovedUser($user));
 
         $user->status = 1;
