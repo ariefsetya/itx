@@ -52,6 +52,10 @@ class HomeController extends Controller
         $data['point'] = 2;
         return view('blogs-rute')->with($data);
     }
+    public function rute_detail($status,$cc)
+    {
+
+    }
     public function objek($cc)
     {
     	$data['search'] = \App\Objek::where('open','1')->whereStatus(!'Private')->where('status',$cc)->orderBy('updated_at','desc')->paginate(12);
