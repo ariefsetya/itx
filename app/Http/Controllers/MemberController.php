@@ -255,7 +255,7 @@ class MemberController extends Controller
         $path = storage_path() . '/app/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp";
         $file = File::get($path);
         $type = File::mimeType($path);
-        $response = Response::make($file);
+        $response = \Response::make($file);
         $response->header("Content-Type", $type);
         return $response;
 
@@ -269,7 +269,7 @@ class MemberController extends Controller
         $path = storage_path() . '/app/content/usercontent/' . $folder."/".$a->id.".cdp";
         $file = File::get($path);
         $type = File::mimeType($path);
-        $response = Response::make($file);
+        $response = \Response::make($file);
         $response->header("Content-Type", $type);
         return $response;
 
