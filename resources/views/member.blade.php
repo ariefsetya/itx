@@ -105,6 +105,7 @@
 						<th>Status</th>
 						<th>Publik?</th>
 						<th>Hapus</th>
+						<th>Userlist</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -115,10 +116,11 @@
 						<td>{{$row->status}}</td>
 						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
 						<td><a href="{{route('delete_rute',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td>
+						<td><a href="{{route('premium_member',[$row->id."-2"])}}">Userlist</a></td>
 					</tr>
 				@endforeach
 				@if(sizeof($rute)==0)
-					<tr><td colspan="5"><h1><span class="mif-heart-broken mif-4x"></span> Belum ada konten</h1></td></tr>
+					<tr><td colspan="6"><h1><span class="mif-heart-broken mif-4x"></span> Belum ada konten</h1></td></tr>
 				@endif
 				</tbody>
 			</table>

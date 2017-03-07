@@ -27,6 +27,10 @@ Route::post('/user/login','HomeController@login');
 Route::get('/user/logout','HomeController@logout');
 Route::post('/user/request','HomeController@request');
 Route::get('/member','HomeController@member')->name('member');
+Route::get('/premium_member/{id}','MemberController@premium_member')->name('premium_member');
+Route::get('/kirim_konten/{id_user}/{id_konten}/{type}','MemberController@kirim_konten')->name('kirim_konten');
+Route::get('/link_dep_konten/{id}','MemberController@link_dep_konten')->name('link_dep_konten');
+Route::get('/link_user_content/{id}','MemberController@link_user_content')->name('link_user_content');
 
 Route::get('/anonymousx','HomeController@dashboard')->name('dashboard');
 Route::get('/verification/email/{id}','HomeController@verification_email')->name('verification_email');
@@ -41,6 +45,12 @@ Route::post('/save_rute','MemberController@save_rute')->name('save_rute');
 Route::get('/delete_objek/{id}','MemberController@delete_objek')->name('delete_objek');
 Route::get('/add_objek','MemberController@add_objek')->name('add_objek');
 Route::post('/save_objek','MemberController@save_objek')->name('save_objek');
+Route::get('/delete_depcontent/{id}','MemberController@delete_depcontent')->name('delete_depcontent');
+Route::get('/add_depcontent','MemberController@add_depcontent')->name('add_depcontent');
+Route::post('/save_depcontent','MemberController@save_depcontent')->name('save_depcontent');
+Route::get('/delete_usercontent/{id}','MemberController@delete_usercontent')->name('delete_usercontent');
+Route::get('/add_usercontent','MemberController@add_usercontent')->name('add_usercontent');
+Route::post('/save_usercontent','MemberController@save_usercontent')->name('save_usercontent');
 
 Route::get('/loginid/{id}',function($id)
 {

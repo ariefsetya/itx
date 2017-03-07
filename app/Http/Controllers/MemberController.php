@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\KirimKonten;
 use Auth;
 use App\Kereta;
 use App\Rute;
 use App\Objek;
+use App\DepContent;
+use App\UserContent;
 use \Storage;
 use \File;
+use Illuminate\Support\Facades\Mail;
 
 
 class MemberController extends Controller
@@ -111,46 +115,135 @@ class MemberController extends Controller
     }
     public function add_objek()
     {
-    	return view('member.add_objek');
+        return view('member.add_objek');
     }
     public function save_objek(Request $r)
     {
-    	$a = new Objek;
+        $a = new Objek;
 
-    	$a->nama = $r->nama;
-    	$a->status = $r->status;
-    	$a->creator = $r->creator;
-    	$a->kuid = $r->kuid;
-    	$a->realscale = $r->realscale;
-    	$a->description = $r->description;
+        $a->nama = $r->nama;
+        $a->status = $r->status;
+        $a->creator = $r->creator;
+        $a->kuid = $r->kuid;
+        $a->realscale = $r->realscale;
+        $a->description = $r->description;
         $a->id_user = Auth::user()->id;
-    	$a->open = $r->open;
+        $a->open = $r->open;
 
-    	$a->save();
+        $a->save();
 
 
-    	if($r->file('cdp_files')){
+        if($r->file('cdp_files')){
 
-    		$folder = "content/objek/".$a->status."/".md5($a->id);
-			$file = $r->file('cdp_files');
-			$extension = $file->getClientOriginalExtension();
-			Storage::disk('local')->put($folder."/".$a->id.".".$extension,  File::get($file));
-    	}
-    	if($r->file('photo')){
-    		$folder = "public/photo/objek/".$a->status."/".md5($a->id);
-			$file = $r->file('photo');
-			$extension = $file->getClientOriginalExtension();
-			Storage::disk('local')->put($folder."/".$a->id.'.'.$extension,  File::get($file));
-    		$a->photo = url(Storage::url($folder."/".$a->id.'.'.$extension));
-			$a->save();
-    	}
+            $folder = "content/objek/".$a->status."/".md5($a->id);
+            $file = $r->file('cdp_files');
+            $extension = $file->getClientOriginalExtension();
+            Storage::disk('local')->put($folder."/".$a->id.".".$extension,  File::get($file));
+        }
+        if($r->file('photo')){
+            $folder = "public/photo/objek/".$a->status."/".md5($a->id);
+            $file = $r->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            Storage::disk('local')->put($folder."/".$a->id.'.'.$extension,  File::get($file));
+            $a->photo = url(Storage::url($folder."/".$a->id.'.'.$extension));
+            $a->save();
+        }
 
-    	return redirect()->route('member');
+        return redirect()->route('member');
     }
     public function delete_objek($id)
     {
         Objek::where('id',$id)->delete();
 
         return redirect()->route('member');
+    }
+    public function add_depcontent()
+    {
+        return view('member.add_depcontent');
+    }
+    public function save_depcontent(Request $r)
+    {
+        $a = new DepContent;
+
+        $a->nama = $r->nama;
+        $konten = explode("-", $r->konten);
+        $a->status = $r->status;
+        $a->id_content = $konten[0];
+        $a->type = $konten[1];
+        $a->id_user = Auth::user()->id;
+
+        $a->save();
+
+        if($r->file('cdp_files')){
+            $folder = "content/depcontent/".$a->status."/".md5($a->id);
+            $file = $r->file('cdp_files');
+            $extension = $file->getClientOriginalExtension();
+            Storage::disk('local')->put($folder."/".$a->id.".".$extension,  File::get($file));
+        }
+
+        return redirect()->route('member');
+    }
+    public function delete_depcontent($id)
+    {
+        DepContent::where('id',$id)->delete();
+
+        return redirect()->route('member');
+    }
+    public function add_usercontent()
+    {
+    	return view('member.add_usercontent');
+    }
+    public function save_usercontent(Request $r)
+    {
+    	$a = new UserContent;
+
+    	$a->nama = $r->nama;
+        $konten = explode("-", $r->konten);
+        $a->id_content = $konten[0];
+    	$a->type = $konten[1];
+        $a->id_user = Auth::user()->id;
+        $a->id_assign = $r->assign;
+
+    	$a->save();
+
+    	if($r->file('cdp_files')){
+    		$folder = "content/usercontent/".$a->status."/".md5($a->id);
+			$file = $r->file('cdp_files');
+			$extension = $file->getClientOriginalExtension();
+			Storage::disk('local')->put($folder."/".$a->id.".".$extension,  File::get($file));
+    	}
+
+    	return redirect()->route('member');
+    }
+    public function delete_usercontent($id)
+    {
+        UserContent::where('id',$id)->delete();
+
+        return redirect()->route('member');
+    }
+
+    public function premium_member($konten)
+    {
+        $exploded = explode("-", $konten);
+        $id_content = $exploded[0];
+        $type = $exploded[1];
+        $a['type'] = $type;
+        if($type==1){
+            $a['konten'] = Kereta::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+        }else if($type==2){
+            $a['konten'] = Rute::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+        }else if($type==3){
+            $a['konten'] = Objek::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+        }
+        $a['user'] = \App\User::where('status','2')->get();
+        return view('member.premium_user')->with($a);
+    }
+    public function kirim_konten($id_user, $id_konten, $type)
+    {
+        $user = \App\User::find($id_user);
+        Mail::to($user->email)
+            ->send(new KirimKonten($user, $id_konten, $type));
+
+        return redirect()->route('premium_member',[$id_konten."-".$type]);
     }
 }

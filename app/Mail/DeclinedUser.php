@@ -31,7 +31,7 @@ class DeclinedUser extends Mailable
     public function build()
     {
         return $this->subject('Indonesian Trainz X Portal : Request Declined')
-            ->from('itx.officialmail@gmail.com')
+            ->from('itx.officialmail@gmail.com','Indonesian Trainz X')
             ->view('email.declined-user')
             ->withUser($this->user);
     }

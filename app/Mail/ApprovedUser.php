@@ -31,7 +31,7 @@ class ApprovedUser extends Mailable
     public function build()
     {
         return $this->subject('Welcome to Indonesian Trainz X Portal')
-            ->from('itx.officialmail@gmail.com')
+            ->from('itx.officialmail@gmail.com','Indonesian Trainz X')
             ->view('email.approved-user')
             ->withUser($this->user);
     }

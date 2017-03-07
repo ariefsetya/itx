@@ -19,6 +19,7 @@ class CreateUserLinksTable extends Migration
             $table->integer('id_assign');
             $table->integer('id_content');
             $table->integer('type');//1 kereta/ 2 rute/ 3 objek
+            $table->integer('source');//1 orig/ 2 user_content/ 3 dep_content
             $table->string('hash');
             $table->integer('open');
             $table->timestamps();
