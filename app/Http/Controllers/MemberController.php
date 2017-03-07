@@ -246,4 +246,32 @@ class MemberController extends Controller
 
         return redirect()->route('premium_member',[$id_konten."-".$type]);
     }
+    public function link_dep_konten($id)
+    {
+        $decoded = base64_decode($id);
+        $a = DepContent::find($decoded);
+        $folder = md5($a->id);
+
+        $path = storage_path() . '/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp";
+        $file = File::get($path);
+        $type = File::mimeType($path);
+        $response = Response::make($file);
+        $response->header("Content-Type", $type);
+        return $response;
+
+    }
+    public function link_user_content($id)
+    {
+        $decoded = base64_decode($id);
+        $a = UserContent::find($decoded);
+        $folder = md5($a->id);
+
+        $path = storage_path() . '/content/usercontent/' . $folder."/".$a->id.".cdp";
+        $file = File::get($path);
+        $type = File::mimeType($path);
+        $response = Response::make($file);
+        $response->header("Content-Type", $type);
+        return $response;
+
+    }
 }

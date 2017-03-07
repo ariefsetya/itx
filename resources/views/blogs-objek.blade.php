@@ -44,7 +44,7 @@
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="{{route('objek_detail',[$row->id])}}">...Selengkapnya</a>
+				        	<a class="text-right button primary" href="{{route('objek_detail',[$search[$i+$x]->id])}}">...Selengkapnya</a>
 				        </div>
 			        </div>
 			    </div>

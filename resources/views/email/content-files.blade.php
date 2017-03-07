@@ -67,7 +67,7 @@
 													<td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
 														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
 															@foreach($dep_konten as $row)
-																<a href="{{route('link_dep_konten',[$row->id])}}">{{$row->nama}}</a><br>
+																<a href="{{route('link_dep_konten',[base64_encode($row->id)])}}">{{$row->nama}}</a><br>
 															@endforeach
 														</p>
 													</td>
@@ -92,7 +92,7 @@
 							<tbody>
 								<tr>
 									<td style="background-color: #ffffff;" align="center" valign="top" bgcolor="#ffffff">
-										<a href="{{route('link_user_content',[$user_konten->id])}}">
+										<a href="{{route('link_user_content',[base64_encode($user_konten->id)])}}">
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
 													<tr>
