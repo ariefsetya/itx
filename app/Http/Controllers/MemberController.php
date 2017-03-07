@@ -252,7 +252,7 @@ class MemberController extends Controller
         $a = DepContent::find($decoded);
         $folder = md5($a->id);
 
-        $path = storage_path() . '/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp";
+        $path = Storage::url('/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp");
         $file = File::get($path);
         $type = File::mimeType($path);
         $response = Response::make($file);
@@ -266,7 +266,7 @@ class MemberController extends Controller
         $a = UserContent::find($decoded);
         $folder = md5($a->id);
 
-        $path = storage_path() . '/content/usercontent/' . $folder."/".$a->id.".cdp";
+        $path = Storage::url('/content/usercontent/' . $folder."/".$a->id.".cdp");
         $file = File::get($path);
         $type = File::mimeType($path);
         $response = Response::make($file);
