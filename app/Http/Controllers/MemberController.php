@@ -257,7 +257,7 @@ class MemberController extends Controller
         $type = File::mimeType($path);
         $response = \Response::make($file);
         $response->header("Content-Type", $type);
-        $response->header("Content-Disposition: attachment; filename", $a->name.".cdp");
+        $response->header("Content-Disposition"," attachment; filename:".$a->name.".cdp");
         return $response;
 
     }
@@ -272,7 +272,7 @@ class MemberController extends Controller
         $type = File::mimeType($path);
         $response = \Response::make($file);
         $response->header("Content-Type", $type);
-        $response->header("Content-Disposition: attachment; filename", $a->name.".cdp");
+        $response->header("Content-Disposition"," attachment; filename:". $a->name.".cdp");
         return $response;
 
     }
