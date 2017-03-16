@@ -48,11 +48,11 @@
 				        		</td>
 			        		</tr>
 				        	<tr>
-				        		<td colspan="2">Description<br><br>{{$search[$i+$x]->description or '--No Description--'}}</td>
+				        		<td colspan="2">Description<br><br>{!!$search[$i+$x]->description or '--No Description--'!!}</td>
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="{{route($jenis.'_detail',[$search[$i+$x]->id])}}">...Selengkapnya</a>
+				        	<a class="text-right button primary" href="{{route($jenis.'_detail',[$search[$i+$x]->status,$search[$i+$x]->id])}}">...Selengkapnya</a>
 				        </div>
 			        </div>
 			    </div>
