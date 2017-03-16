@@ -40,7 +40,7 @@
 				        		</td>
 			        		</tr>
 				        	<tr>
-				        		<td colspan="2" style="word-wrap: break-word;white-space: normal;">Description<br><br>{!!$search[$i+$x]->description or '--No Description--'!!}</td>
+				        		<td colspan="2"  style="word-wrap: break-word;white-space:pre-wrap;max-width:100px;">Description<br><br>{!!$search[$i+$x]->description or '--No Description--'!!}</td>
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
