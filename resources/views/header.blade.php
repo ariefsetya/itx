@@ -71,10 +71,10 @@
                         <li data-flexorderorigin="2" data-flexorder="3" class="">
                             <a href="#" class="dropdown-toggle">Friends List</a>
                             <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
-                            @foreach(\App\User::where('status','creator')->whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get() as $row)
+                            @foreach(\App\User::whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get() as $row)
                                 <li><a href="{{route('gerbong',[$row->subjenis])}}">{{$row->subjenis}}</a></li>
                             @endforeach
-                            @if(sizeof(\App\User::where('status','creator')->whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get())==0)
+                            @if(sizeof(\App\User::whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get())==0)
                             <li><a href="#">Belum ada daftar</a></li>
                             @endif
                             </ul>
