@@ -18,7 +18,7 @@
 				</thead>
 				<tbody>
 				@foreach($user as $row)
-					@if(sizeof(\App\UserContent::where('id_assign',$row->id)->get())==1)
+					@if(sizeof(\App\UserContent::where('id_assign',$row->id)->where('id_content',$konten->id)->get())==1)
 						<tr>
 							<td>#{{$row->id}}</td>
 							<td>{{$row->name}}</td>
