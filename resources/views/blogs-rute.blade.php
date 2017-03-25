@@ -37,9 +37,6 @@
 				        		@endif
 				        		</td>
 			        		</tr>
-				        	<tr>
-				        		<td colspan="2"  style="word-wrap: break-word;white-space:pre-wrap;max-width:100px;">Description<br><br>{!!$search[$i+$x]->description or '--No Description--'!!}</td>
-				        	</tr>
 				        </table>
 				        <div dir="rtl" >
 				        	<a class="text-right button primary" href="{{route('rute_detail',[$search[$i+$x]->status,$search[$i+$x]->id])}}">...Selengkapnya</a>
