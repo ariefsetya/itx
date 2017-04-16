@@ -5,7 +5,7 @@
 <div class="grid">
 	<div class="row cells1">
 		<div class="cell">
-			<form method="POST" action="{{route('save_rute')}}" enctype="multipart/form-data">
+			<form method="POST" action="{{route('save_objek')}}" enctype="multipart/form-data">
 			{{csrf_field()}}
 				<table class="table bordered">
 					<tr>
@@ -54,7 +54,7 @@
 						<td>Reskin</td>
 						<td>
 							<div class="full-size input-control text">
-								<input type="text" name="reskin" placeholder="Reskin" required>
+								<input type="text" name="reskin" placeholder="Reskin">
 							</div>
 						</td>
 					</tr>

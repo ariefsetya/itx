@@ -56,6 +56,11 @@ class HomeController extends Controller
     {
 
     }
+    public function download_objek($hash)
+    {
+        $id = base64_decode($hash);
+        
+    }
     public function objek($cc)
     {
     	$data['search'] = \App\Objek::where('open','1')->whereStatus(!'Private')->where('status',$cc)->orderBy('updated_at','desc')->paginate(12);

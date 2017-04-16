@@ -44,7 +44,11 @@
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="{{route('objek_detail',[$search[$i+$x]->status,$search[$i+$x]->id])}}">...Selengkapnya</a>
+				        	@if(Auth::check())
+				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$i+$x]->id)])}}">Download</a>
+				        	@else
+				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$i+$x]->id)])}}"><span>Masuk atau Daftar untuk download</span></a>
+				        	@endif
 				        </div>
 			        </div>
 			    </div>

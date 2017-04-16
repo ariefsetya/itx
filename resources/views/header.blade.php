@@ -53,7 +53,7 @@
                         <li><a href="{{route('rute',['pay'])}}">Payware</a></li>
                     </ul>
                 </li>
-                @if(0)
+                @if(1)
                 <li data-flexorderorigin="2" data-flexorder="3" class="">
                     <a href="#" class="dropdown-toggle">Objek</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
