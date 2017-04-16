@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function download_objek($hash)
     {
         $id = base64_decode($hash);
-        
+
     }
     public function objek($cc)
     {
@@ -107,7 +107,7 @@ class HomeController extends Controller
         $decoded_json = json_decode($response);
         $phone = "0".$decoded_json->phone->national_number;
 
-        $a = \App\User::where('phone',$phone)->where('status','>','1')->get();
+        $a = \App\User::where('phone',$phone)->get();
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
 
@@ -159,13 +159,15 @@ class HomeController extends Controller
     public function member()
     {
         if(Auth::check()){
-            $data['train']['lokomotif'] = Kereta::where('jenis','lokomotif')->where('id_user',Auth::user()->id)->get();
-            $data['train']['kereta'] = Kereta::where('jenis','kereta')->where('id_user',Auth::user()->id)->get();
-            $data['train']['gerbong'] = Kereta::where('jenis','gerbong')->where('id_user',Auth::user()->id)->get();
-            $data['rute'] = Rute::where('id_user',Auth::user()->id)->get();
-            $data['objek'] = Objek::where('id_user',Auth::user()->id)->get();
+            if(Auth::user()->id==1){
+                $data['train']['lokomotif'] = Kereta::where('jenis','lokomotif')->where('id_user',Auth::user()->id)->get();
+                $data['train']['kereta'] = Kereta::where('jenis','kereta')->where('id_user',Auth::user()->id)->get();
+                $data['train']['gerbong'] = Kereta::where('jenis','gerbong')->where('id_user',Auth::user()->id)->get();
+                $data['rute'] = Rute::where('id_user',Auth::user()->id)->get();
+                $data['objek'] = Objek::where('id_user',Auth::user()->id)->get();
 
-            return view('member')->with($data);
+                return view('member')->with($data);
+            }
         }
     }
     public function logout()

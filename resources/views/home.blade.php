@@ -178,7 +178,9 @@
 	<div class="row cells1">
 		<div class="cell">
 			<h3>Anda masuk sebagai {{Auth::user()->name}} ({{Auth::user()->email}}), <a href="{{url('user/logout')}}">keluar</a></h3>
+			@if(Auth::user()->id==1)
 			<a href="{{route('member')}}" class="button primary">Masuk ke Member Area</a>
+			@endif
 		</div>
 	</div>
 </div>
