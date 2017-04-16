@@ -111,7 +111,7 @@ class HomeController extends Controller
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
 
-            return redirect()->route('member');
+            return redirect()->route('home')->with(array('msg'=>'Selamat datang di Indonesian Trainz X','title'=>'Welcome'));
         }else{
             return redirect()->route('home')->with(array('msg'=>'Login Failed, your phone number is not registered','title'=>'Login Failed'));
         }
