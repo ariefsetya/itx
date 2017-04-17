@@ -274,18 +274,4 @@ class MemberController extends Controller
         $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
         return $response;
     }
-    public function link_user_objek($id)
-    {
-        $decoded = base64_decode($id);
-        $a = Objek::find($decoded);
-        $folder = md5($a->id);
-
-        $path = storage_path() . '/app/content/objek/'.$a->status.'/' . $folder."/".$a->id.".cdp";
-        $file = File::get($path);
-        $type = File::mimeType($path);
-        $response = \Response::make($file);
-        $response->header("Content-Type", $type);
-        $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
-        return $response;
-    }
 }

@@ -220,5 +220,23 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
+    public function link_user_objek($id)
+    {
+        $decoded = base64_decode($id);
+        $a = Objek::find($decoded);
+        $folder = md5($a->id);
+
+        if($a->status!="free" and Auth::check() or $a->status=="free"){
+            $path = storage_path() . '/app/content/objek/'.$a->status.'/' . $folder."/".$a->id.".cdp";
+            $file = File::get($path);
+            $type = File::mimeType($path);
+            $response = \Response::make($file);
+            $response->header("Content-Type", $type);
+            $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
+            return $response;
+        }else{
+            return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
+        }
+    }
 
 }
