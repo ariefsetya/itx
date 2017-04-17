@@ -44,7 +44,7 @@
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	@if(Auth::check())
+				        	@if(Auth::check() and $search[$i+$x]->status!="free" or $search[$i+$x]->status=="free")
 				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$i+$x]->id)])}}">Download</a>
 				        	@else
 				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$i+$x]->id)])}}"><span>Masuk atau Daftar untuk download</span></a>
