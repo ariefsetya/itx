@@ -5,7 +5,7 @@
 <div class="grid">
 	@for($i=0;$i<ceil(sizeof($search)/$point);$i++)
 	<div class="row cells{{$point}}">
-	@for($x=$i;$x<$point+$i;$x++)
+	@for($x=$i*$point;$x<$i*$point+($point-1);$x++)
 	@if(isset($search[$x]))
 		<div class="cell">
 			<div class="panel">
