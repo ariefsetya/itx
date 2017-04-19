@@ -3,9 +3,9 @@
 @section('content')
 <h1>{{$query}}</h1>
 <div class="grid">
-	@for($i=0;$i<sizeof($search)/$point;$i++)
+	@for($i=0;$i<ceil(sizeof($search)/$point);$i++)
 	<div class="row cells{{$point}}">
-	@for($x=0;$x<$point;$x++)
+	@for($x=($i>1?1:0);$x<$point+($i>1?1:0);$x++)
 	@if(isset($search[$i+$x]))
 		<div class="cell">
 			<div class="panel">
