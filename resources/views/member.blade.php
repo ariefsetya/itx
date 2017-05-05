@@ -9,6 +9,9 @@
 				<a href="{{route('add_rute')}}" class="button">Upload Rute</a>
 				<a href="{{route('add_objek')}}" class="button">Upload Objek</a>
 			</div>
+
+			<h4>Downloads Count valid from May 6<sup>rd</sup> 2017</h4>
+			
 			<h1>Train &raquo; Lokomotif</h1>
 			<table class="table striped hovered">
 				<thead>
@@ -133,6 +136,7 @@
 						<th>Nama</th>
 						<th>Status</th>
 						<th>Publik?</th>
+						<th>Downloads</th>
 						<th>Hapus</th>
 					</tr>
 				</thead>
@@ -143,6 +147,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
 						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
+				        <td>{{$row->download(base64_encode($row->id))}}</td>
 						<td><a href="{{route('delete_objek',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td>
 					</tr>
 				@endforeach
@@ -156,13 +161,7 @@
 			<h1>Last Downloaded</h1>
 			<hr>
 			<table class="table striped hovered">
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
-				<tr><td>DAOP 7 MN by Arief Setya<br>@ Sat, 22 Nov 2016 22:00:00</td></tr>
+			
 			</table>
 		</div>
 	</div>
