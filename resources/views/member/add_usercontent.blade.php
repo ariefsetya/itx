@@ -15,7 +15,26 @@
 								<select name="assign" required>
 									<option value="">--Pilih--</option>
 									@foreach(\App\User::where('status',2)->orWhere('status',3)->get() as $row)
-									<option value="{{$row->id}}">{{$row->name}}</option>
+									<?php
+									$tsver = json_decode($row->tsver);
+									$data = array();
+									foreach ($tsver as $key => $val) {
+										if($val=="Ya"){
+											$data[] = $key;
+										}
+									}
+									$ts = implode(",", $data);
+
+									$uc = \App\UserContent::where('id_assign',$row->id)->get();
+									$ac = array();
+									foreach ($uc as $key) {
+										if($key->type=="2"){
+											$ac[] = \App\Rute::find($key->id)['nama'];
+										}
+									}
+									$c = implode(",", $ac); 
+									?>
+									<option value="{{$row->id}}">{{$row->name." (".$ts.")"." R: ".$c}}</option>
 									@endforeach
 								</select>
 							</div>
