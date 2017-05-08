@@ -29,7 +29,7 @@
 									$ac = array();
 									foreach ($uc as $key) {
 										if($key->type=="2"){
-											$ac[] = \App\Rute::find($key->id)['nama'];
+											$ac[] = \App\Rute::find($key->id_content)['nama'];
 										}
 									}
 									$c = implode(",", $ac); 
