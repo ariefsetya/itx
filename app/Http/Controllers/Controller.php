@@ -20,7 +20,7 @@ class Controller extends BaseController
 		//$this->middleware('auth');
 		//echo "<pre>".print_r($_SERVER,1)."</pre>";
 		$log = new Logdata();
-		$log->idpengguna = session('user_id',0);
+		$log->idpengguna = \Session::get('user_id');
 		$log->url = $r->url();
 		$log->user_agent = $_SERVER['HTTP_USER_AGENT'];
 		$log->ip = $_SERVER['REMOTE_ADDR'];

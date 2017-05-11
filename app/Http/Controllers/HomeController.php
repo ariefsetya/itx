@@ -114,7 +114,8 @@ class HomeController extends Controller
         $a = \App\User::where('phone',$phone)->get();
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
-            session(['user_id' => $a[0]->id]);
+            // session(['user_id' => $a[0]->id]);
+            \Session::put('user_id',$a[0]->id);
 
             return redirect()->route('home')->with(array('msg'=>'Selamat datang di Indonesian Trainz X','title'=>'Welcome'));
         }else{
