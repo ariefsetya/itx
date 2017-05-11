@@ -244,5 +244,11 @@ class HomeController extends Controller
             return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
         }
     }
+    function __destruct(Request $r)
+    {
+        $log = \App\Logdata::where(array('url'=>$r->url(),'ip'=>$_SERVER['REMOTE_ADDR'],'ip_port'=>isset($_SERVER['REMOTE_PORT'])?$_SERVER['REMOTE_PORT']:""));
+        $log->idpengguna = Auth::check()?Auth::user()->id:0;
+        $log->save();
+    }
 
 }
