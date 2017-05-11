@@ -18,7 +18,7 @@
 				</thead>
 				<tbody>
 				@foreach($user as $row)
-					@if(sizeof(\App\UserContent::where('id_assign',$row->id)->where('id_content',$konten->id)->get())==1)
+					<?php //@if(sizeof(\App\UserContent::where('id_assign',$row->id)->where('id_content',$konten->id)->get())==1)?>
 						<tr>
 							<td>#{{$row->id}}</td>
 							<td>{{$row->name}}</td>
@@ -58,7 +58,7 @@
 								<a class="button success" href="{{route('kirim_konten',[$row->id,$konten->id,$type])}}">Kirim</a>
 							</td>
 						</tr>
-					@endif
+					<?php //@endif ?>
 				@endforeach
 				@if(sizeof($user)==0)
 					<tr><td colspan="5"><h1><span class="mif-heart-broken mif-4x"></span> Belum ada data</h1></td></tr>
