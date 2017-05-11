@@ -81,6 +81,7 @@
                         </li>
                     </ul>
                 </li>
+                <li><a href="{{url('terms')}}">Terms of Service</a></li>
             </ul>
 
             <span class="app-bar-pull"></span>

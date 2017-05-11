@@ -112,6 +112,7 @@
 					</div>
 					<div class="input-control textarea full-size" data-role="input" data-text-auto-resize="true">
 					    <textarea name="reason" placeholder="Pernyataan untuk tunduk pada aturan Indonesian Trainz X" required></textarea>
+					    baca : <a href="{{url('terms')}}">{{url('terms')}}</a> 
 					</div>
 					<label class="input-control checkbox full-size">
 					    <input type="checkbox" name="ori">
