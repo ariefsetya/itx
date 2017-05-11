@@ -301,9 +301,9 @@ class MemberController extends Controller
         return $response;
     }
 
-    function __destruct(Request $r)
+    function __destruct()
     {
-        $log = \App\Logdata::where(array('url'=>$r->url(),'ip'=>$_SERVER['REMOTE_ADDR'],'ip_port'=>isset($_SERVER['REMOTE_PORT'])?$_SERVER['REMOTE_PORT']:""));
+        $log = \App\Logdata::where(array('ip'=>$_SERVER['REMOTE_ADDR'],'ip_port'=>isset($_SERVER['REMOTE_PORT'])?$_SERVER['REMOTE_PORT']:""))->orderBy('id','desc')->first();
         $log->idpengguna = Auth::check()?Auth::user()->id:0;
         $log->save();
     }
