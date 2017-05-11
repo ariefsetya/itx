@@ -95,7 +95,7 @@
 									@if($is_userkonten)
 										<a href="{{route('link_user_content',[base64_encode($user_konten->id)])}}">
 									@else
-										<a href="{{route('link_content',[base64_encode($type_code),base64_encode($user_konten->id)])}}">
+										<a href="{{route('link_content',[base64_encode($type_code),base64_encode($konten->id)])}}">
 									@endif
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
