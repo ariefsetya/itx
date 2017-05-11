@@ -52,7 +52,7 @@
 								<img src="{{$row->photo}}"><hr>
 								( <a target="_blank" href="{{"https://facebook.com/".$row->fb}}">{{"https://facebook.com/".$row->fb}}</a> )
 							</td>
-							<td valign="top">
+							<td valign="top" colspan="2">
 								Reason :<br>
 								{{$row->reason}}
 							</td>
