@@ -12,6 +12,7 @@ use App\DepContent;
 use App\UserContent;
 use \Storage;
 use \File;
+use \Session;
 use Illuminate\Support\Facades\Mail;
 
 

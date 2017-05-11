@@ -13,7 +13,7 @@ use App\Rute;
 use App\Objek;
 use \Storage;
 use \File;
-
+use \Session;
 
 class HomeController extends Controller
 {
