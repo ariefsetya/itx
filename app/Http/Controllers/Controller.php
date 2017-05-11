@@ -7,12 +7,11 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Logdata;
-use Auth;
 use Illuminate\Http\Request;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, Auth;
 
     public function __construct(Request $r)
 	{
@@ -20,7 +19,7 @@ class Controller extends BaseController
 		//$this->middleware('auth');
 		//echo "<pre>".print_r($_SERVER,1)."</pre>";
 		$log = new Logdata();
-		$log->idpengguna = \Session::get('user_id');
+		$log->idpengguna = Auth::check()?Auth::user()->id:0;
 		$log->url = $r->url();
 		$log->user_agent = $_SERVER['HTTP_USER_AGENT'];
 		$log->ip = $_SERVER['REMOTE_ADDR'];
