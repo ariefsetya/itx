@@ -287,7 +287,7 @@ class MemberController extends Controller
         }else if($type_decoded=="kereta"){
             $a = Kereta::find($decoded);
         }
-        $folder = storage_path() . "/app/content/".$type."/".$a->status."/".md5($a->id)."/".$a->id.".cdp";
+        $folder = storage_path() . "/app/content/".$type_decoded."/".$a->status."/".md5($a->id)."/".$a->id.".cdp";
         // $path = storage_path() . '/app/content/usercontent/' . $folder."/".$a->id.".cdp";
         $file = File::get($folder);
         $type = File::mimeType($folder);
