@@ -49,7 +49,7 @@
 								</ul>
 							</td>
 							<td align="center">
-								<img src="{{$row->photo}}"><hr>
+								<img src="{{$row->photo}}" style="max-width: 200px;"><hr>
 								( <a target="_blank" href="{{"https://facebook.com/".$row->fb}}">{{"https://facebook.com/".$row->fb}}</a> )
 							</td>
 							<td valign="top" colspan="2">
