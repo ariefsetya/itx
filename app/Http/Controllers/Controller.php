@@ -14,13 +14,13 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function __construct(Request $r,Auth $a)
+    public function __construct(Request $r)
 	{
 		date_default_timezone_set("Asia/Jakarta");
 		//$this->middleware('auth');
 		//echo "<pre>".print_r($_SERVER,1)."</pre>";
 		$log = new Logdata();
-		$log->idpengguna = ($a::check())?$a::user()->id:0;
+		$log->idpengguna = (Auth::check())?Auth::user()->id:0;
 		$log->url = $r->url();
 		$log->user_agent = $_SERVER['HTTP_USER_AGENT'];
 		$log->ip = $_SERVER['REMOTE_ADDR'];

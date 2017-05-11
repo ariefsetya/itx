@@ -19,9 +19,8 @@ class MemberController extends Controller
 {
     function __construct(Request $r)
     {
-        $a = Auth;
-        parent::__construct($r,$a);
         $this->middleware('auth');
+        parent::__construct($r);
     }
     public function add_train()
     {
