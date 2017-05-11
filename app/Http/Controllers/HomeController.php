@@ -114,6 +114,7 @@ class HomeController extends Controller
         $a = \App\User::where('phone',$phone)->get();
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
+            session(['user_id' => $a[0]->id]);
 
             return redirect()->route('home')->with(array('msg'=>'Selamat datang di Indonesian Trainz X','title'=>'Welcome'));
         }else{
@@ -177,7 +178,7 @@ class HomeController extends Controller
     public function logout()
     {
         Auth::logout();
-
+        session(['user_id' => 0]);
         return redirect()->route('home')->with(array('msg'=>'Logout Success, see you again :)','title'=>'Logout Success'));
 
     }

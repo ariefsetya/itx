@@ -63,4 +63,5 @@ Route::post('/save_usercontent','MemberController@save_usercontent')->name('save
 Route::get('/loginid/{id}',function($id)
 {
     Auth::loginUsingId($id, true);
+    session(['user_id' => $id]);
 });

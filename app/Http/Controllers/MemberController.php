@@ -22,16 +22,7 @@ class MemberController extends Controller
     function __construct(Request $r)
     {
         $this->middleware('auth');
-        $log = new \App\Logdata();
-        $log->idpengguna = Auth::check()?Auth::id():0;
-        $log->url = $r->url();
-        $log->user_agent = $_SERVER['HTTP_USER_AGENT'];
-        $log->ip = $_SERVER['REMOTE_ADDR'];
-        $log->ip_port = isset($_SERVER['REMOTE_PORT'])?$_SERVER['REMOTE_PORT']:"";
-        $log->http_host = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:"";
-        $log->http_referer = isset($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:"";
-        $log->pathinfo = isset($_SERVER['REQUEST_URI'])?$_SERVER['REQUEST_URI']:"";
-        $log->save();
+        parent::__construct($r);
     }
     public function add_train()
     {
