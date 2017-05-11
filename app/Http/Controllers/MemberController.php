@@ -20,8 +20,9 @@ class MemberController extends Controller
     function __construct(Request $r)
     {
         $this->middleware('auth');
+        dd(Auth::user());
         $log = new \App\Logdata();
-        $log->idpengguna = (Auth::check())?Auth::user()->id:0;
+        $log->idpengguna = Auth::check()?Auth::user()->id:0;
         $log->url = $r->url();
         $log->user_agent = $_SERVER['HTTP_USER_AGENT'];
         $log->ip = $_SERVER['REMOTE_ADDR'];
