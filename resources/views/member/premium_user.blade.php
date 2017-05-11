@@ -57,7 +57,9 @@
 								{{$row->reason}}
 							</td>
 							<td align="center">
-								<a class="button success" href="{{route('kirim_konten',[$row->id,$konten->id,$type])}}">Kirim</a>
+								<a class="button success" href="{{route('kirim_konten',[$row->id,$konten->id,$type])}}">Kirim
+								{{sizeof(\App\Logdata::where('url','like','%kirim_konten/'.$row->id."/".$konten->id."/".$type.'%')->get())}}
+								</a>
 							</td>
 						</tr>
 				@endforeach
