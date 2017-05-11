@@ -23,7 +23,7 @@ class MemberController extends Controller
     {
         $this->middleware('auth');
         $log = new \App\Logdata();
-        $log->idpengguna = Auth::check()?Auth::user()->getId():0;
+        $log->idpengguna = Auth::check()?Auth::id():0;
         $log->url = $r->url();
         $log->user_agent = $_SERVER['HTTP_USER_AGENT'];
         $log->ip = $_SERVER['REMOTE_ADDR'];
