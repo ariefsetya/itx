@@ -17,12 +17,20 @@ use Illuminate\Support\Facades\Mail;
 
 class MemberController extends Controller
 {
+
+    protected $user;
+
     function __construct(Request $r)
     {
         $this->middleware('auth');
-        dd(Auth::user());
+        $this->middleware(function ($request, $next) {
+            $this->user = Auth::user();
+
+            return $next($request);
+        });
+        dd($this->user);
         $log = new \App\Logdata();
-        $log->idpengguna = Auth::check()?Auth::user()->id:0;
+        $log->idpengguna = $this->user->id;
         $log->url = $r->url();
         $log->user_agent = $_SERVER['HTTP_USER_AGENT'];
         $log->ip = $_SERVER['REMOTE_ADDR'];
