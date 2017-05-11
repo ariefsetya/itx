@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Mail;
 
 class MemberController extends Controller
 {
-    function __construct()
+    function __construct(Request $r)
     {
-        parent::__construct();
+        parent::__construct($r);
         $this->middleware('auth');
     }
     public function add_train()
