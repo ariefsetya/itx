@@ -20,7 +20,7 @@ class MemberController extends Controller
     function __construct(Request $r)
     {
         $this->middleware('auth');
-        $log = new Logdata();
+        $log = new \App\Logdata();
         $log->idpengguna = (Auth::check())?Auth::user()->id:0;
         $log->url = $r->url();
         $log->user_agent = $_SERVER['HTTP_USER_AGENT'];
