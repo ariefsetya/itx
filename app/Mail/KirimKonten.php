@@ -20,9 +20,11 @@ class KirimKonten extends Mailable
 
     public $user;
     public $type;
+    public $type_code;
     public $konten;
     public $userkonten;
     public $depkonten;
+    public $is_userkonten;
 
     /**
      * Create a new message instance.
@@ -34,12 +36,19 @@ class KirimKonten extends Mailable
         $this->type = $type; 
         if($type==1){
             $this->konten = Kereta::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+            $this->type_code = "kereta"; 
         }else if($type==2){
             $this->konten = Rute::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+            $this->type_code = "rute"; 
         }else if($type==3){
             $this->konten = Objek::where('id_user',Auth::user()->id)->where('id',$id_content)->first();
+            $this->type_code = "objek"; 
         }       
         $this->userkonten = UserContent::where('id_assign',$user->id)->first();
+        $this->is_userkonten = 1;
+        if(sizeof($this->userkonten)==0){
+            $this->is_userkonten = 0;
+        }
         $this->depkonten = DepContent::where('id_content',$id_content)->where('type',$type)->get();
 
         $this->user = $user;

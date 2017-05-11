@@ -92,7 +92,11 @@
 							<tbody>
 								<tr>
 									<td style="background-color: #ffffff;" align="center" valign="top" bgcolor="#ffffff">
+									@if($is_userkonten)
 										<a href="{{route('link_user_content',[base64_encode($user_konten->id)])}}">
+									@else
+										<a href="{{route('link_content',[base64_encode($type_code),base64_encode($user_konten->id)])}}">
+									@endif
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
 													<tr>

@@ -274,4 +274,26 @@ class MemberController extends Controller
         $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
         return $response;
     }
+    public function link_content($type,$id)
+    {
+        $folder = "";
+        $a = array();
+        $type_decoded = base64_decode($type);
+        $decoded = base64_decode($id);
+        if($type_decoded=="rute"){
+            $a = Rute::find($decoded);
+        }else if($type_decoded=="objek"){
+            $a = Objek::find($decoded);
+        }else if($type_decoded=="kereta"){
+            $a = Kereta::find($decoded);
+        }
+        $folder = storage_path() . "/app/content/".$type."/".$a->status."/".md5($a->id)."/".$a->id.".cdp";
+        // $path = storage_path() . '/app/content/usercontent/' . $folder."/".$a->id.".cdp";
+        $file = File::get($folder);
+        $type = File::mimeType($folder);
+        $response = \Response::make($file);
+        $response->header("Content-Type", $type);
+        $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
+        return $response;
+    }
 }
