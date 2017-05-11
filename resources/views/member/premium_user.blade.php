@@ -52,11 +52,11 @@
 								<img src="{{$row->photo}}" style="max-width: 200px;"><hr>
 								( <a target="_blank" href="{{"https://facebook.com/".$row->fb}}">{{"https://facebook.com/".$row->fb}}</a> )
 							</td>
-							<td valign="top" colspan="2">
+							<td valign="top">
 								Reason :<br>
 								{{$row->reason}}
 							</td>
-							<td align="center">
+							<td align="center" colspan="2">
 								<a class="button success" href="{{route('kirim_konten',[$row->id,$konten->id,$type])}}">Kirim ({{sizeof(\App\Logdata::where('url','like','%kirim_konten/'.$row->id."/".$konten->id."/".$type.'%')->get())}})</a>
 							</td>
 						</tr>
