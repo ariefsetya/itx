@@ -39,7 +39,7 @@
 			        		</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="{{route('rute_detail',[$search[$x]->status,$search[$x]->id])}}">...Selengkapnya</a>
+				        	<a class="text-right button primary" href="{{route('rute_detail',[base64_encode($search[$x]->id)])}}">...Selengkapnya</a>
 				        </div>
 			        </div>
 			    </div>

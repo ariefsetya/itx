@@ -25,7 +25,7 @@ Route::get('/kereta/{kereta}/{id}', 'HomeController@kereta_detail')->name('keret
 Route::get('/gerbong/{gerbong}', 'HomeController@gerbong')->name('gerbong');
 Route::get('/gerbong/{gerbong}/{id}', 'HomeController@gerbong_detail')->name('gerbong_detail');
 Route::get('/rute/{status}', 'HomeController@rute')->name('rute');
-Route::get('/rute/{status}/{id}', 'HomeController@rute_detail')->name('rute_detail');
+Route::get('/rute/{id}', 'HomeController@rute_detail')->name('rute_detail');
 Route::get('/objek/{status}', 'HomeController@objek')->name('objek');
 Route::get('/objek/{status}/{id}', 'HomeController@objek_detail')->name('objek_detail');
 

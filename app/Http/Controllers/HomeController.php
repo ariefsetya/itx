@@ -56,14 +56,16 @@ class HomeController extends Controller
         $data['point'] = 2;
         return view('blogs-rute')->with($data);
     }
-    public function rute_detail($status,$cc)
+    public function rute_detail($cc)
     {
-
+        $hash = base64_decode($cc);
+        $data['data'] = \App\Rute::find($hash);
+        $data['dep_konten'] = \App\DepContent::where('id_content',$hash)->get();
+        return view('detail.rute')->with($data);
     }
     public function download_objek($hash)
     {
         $id = base64_decode($hash);
-
     }
     public function objek($cc)
     {
@@ -111,7 +113,7 @@ class HomeController extends Controller
         $decoded_json = json_decode($response);
         $phone = "0".$decoded_json->phone->national_number;
 
-        $a = \App\User::where('phone',$phone)->get();
+        $a = \App\User::where('phone',$phone)->where('status','>',1)->get();
         if(sizeof($a)>0){
             Auth::loginUsingId($a[0]->id, true);
             // session(['user_id' => $a[0]->id]);
