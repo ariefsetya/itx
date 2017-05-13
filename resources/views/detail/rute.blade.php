@@ -27,62 +27,30 @@
             <img src="{{$data->photo}}">
         </div>
     </div>
-	<table id="ko_singleArticleBlock_3" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
-		<tbody>
-			<tr>
-				<td class="vb-outer" align="center" valign="top">
-					<div class="oldwebkit">
-						<table class="vb-container fullpad" style="border-collapse: separate; width: 100%; background-color: #fff;" border="0" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
-							<tbody>
-								@if($data->status=="free" or $data->status!="free" and Auth::check())
-								<tr>
-									<td>
-										<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
-											<tbody>
-												<tr>
-													<td class="long-text links-color" style="text-align: left; color: #3f3f3f;" align="left">
-														<p style="margin:0em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: pre;">
-															{!!preg_replace('/((http:\/\/|https:\/\/)\S+)/', '<a href="$1" target="_blank">$1</a>', str_replace("<br>","\n",$data->description))!!}
-														</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-										<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
-											<tbody>
-												<tr>
-													<td style="font-size: 1px; line-height: 1px;" height="9">
-														 
-													</td>
-												</tr>
-												<tr>
-													<td style="color: #3f3f3f; text-align: left;">
-														<span style="color: #3f3f3f;">
-															 Downloadable Dep {{$data->nama}}
-														</span>
-													</td>
-												</tr>
-												<tr>
-													<td class="long-text links-color" style="text-align: left; color: #3f3f3f;" align="left">
-														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
-															@foreach($dep_konten as $row)
-																<a href="{{route('link_dep_konten',[base64_encode($row->id)])}}">{{$row->nama}}</a><br>
-															@endforeach
-														</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								@endif
-							</tbody>
-						</table>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+    @if($data->status=="free" or $data->status!="free" and Auth::check())
+    <div class="panel">
+    	<div class="heading">
+    		<span class="title">Description</span>
+    	</div>
+        <div class="content">
+            <p style="margin:0em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: pre;">
+				{!!preg_replace('/((http:\/\/|https:\/\/)\S+)/', '<a href="$1" target="_blank">$1</a>', str_replace("<br>","\n",$data->description))!!}
+			</p>
+        </div>
+    </div>
+    <div class="panel">
+    	<div class="heading">
+    		<span class="title">Downloadable Dep {{$data->nama}}</span>
+    	</div>
+        <div class="content">
+            <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
+				@foreach($dep_konten as $row)
+					<a href="{{route('link_dep_konten',[base64_encode($row->id)])}}">{{$row->nama}}</a><br>
+				@endforeach
+			</p>
+        </div>
+    </div>
+	@endif
 	<table id="ko_buttonBlock_5" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
