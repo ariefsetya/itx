@@ -43,7 +43,7 @@
 												<tr>
 													<td class="long-text links-color" style="text-align: left; color: #3f3f3f;" align="left">
 														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: normal;">
-															{!!$data->description!!}
+															{!!preg_replace('/((www|http:\/\/)[^ ]+)/', '<a href="\1" target="_blank">\1</a>', $data->description)!!}
 														</p>
 													</td>
 												</tr>
