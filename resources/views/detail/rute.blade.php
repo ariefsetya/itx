@@ -61,7 +61,7 @@
 								<tr>
 									<td style="" align="center" valign="top" bgcolor="#ffffff">
 									@if($data->status=="free")
-										<a href="{{route('link_content',[base64_encode($data->status),base64_encode($data->id)])}}">
+										<a href="{{route('link_content',[base64_encode("rute"),base64_encode($data->id)])}}">
 									@else
 										@if(Auth::check())
 											<a href="{{route('kirim_konten_member',[Auth::id(),$data->id,2])}}">
