@@ -97,7 +97,7 @@
 										<a href="{{route('link_content',[base64_encode($data->status),base64_encode($data->id)])}}">
 									@else
 										@if(Auth::check())
-											<a href="{{route('kirim_konten',[Auth::id(),$data->id,2])}}">
+											<a href="{{route('kirim_konten_member',[Auth::id(),$data->id,2])}}">
 										@else
 											<a href="{{route('home')}}">
 										@endif
