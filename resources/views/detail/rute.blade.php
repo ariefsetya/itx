@@ -31,7 +31,14 @@
 							<tbody>
 								<tr>
 									<td class="links-color" align="left" valign="top" width="100%">
-										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top;  width: 100%; height: auto;" src="{{$data->photo}}" alt="" border="0" hspace="0" vspace="0" />
+										<div class="panel">
+							                <div class="heading">
+							                    <span class="title">Selamat Datang di Indonesian Trainz X</span>
+							                </div>
+							                <div class="content">
+							                    <img src="{{$data->photo}}">
+							                </div>
+							            </div>
 									</td>
 								</tr>
 
