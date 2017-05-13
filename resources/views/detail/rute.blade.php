@@ -7,10 +7,10 @@
 			<tr>
 				<td class="vb-outer" align="center" valign="top">
 					<div class="oldwebkit">
-						<table class="vb-container halfpad" style="border-collapse: separate; border-spacing: 9px; padding-left: 9px; padding-right: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
+						<table class="vb-container halfpad" style="border-collapse: separate; width: 100%; background-color: #fff;" border="0" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
-									<td style="background-color: #ffffff; font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: center;" align="center" bgcolor="#ffffff">
+									<td style=" text-align: center;" align="center" bgcolor="#ffffff">
 										{{$data->nama}}
 									</td>
 								</tr>
@@ -27,11 +27,11 @@
 			<tr>
 				<td class="vb-outer" align="center" valign="top">
 					<div class="oldwebkit">
-						<table class="vb-container fullpad" style="border-collapse: separate; border-spacing: 18px; padding-left: 0; padding-right: 0; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
+						<table class="vb-container fullpad" style="border-collapse: separate; width: 100%; background-color: #fff;" border="0" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
 									<td class="links-color" align="left" valign="top" width="100%">
-										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top; max-width: 534px; width: 100%; height: auto;" src="{{$data->photo}}" alt="" width="534" border="0" hspace="0" vspace="0" />
+										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top;  width: 100%; height: auto;" src="{{$data->photo}}" alt="" border="0" hspace="0" vspace="0" />
 									</td>
 								</tr>
 
@@ -41,8 +41,8 @@
 										<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
 											<tbody>
 												<tr>
-													<td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
-														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: normal;max-width: 534px;width: 534px;">
+													<td class="long-text links-color" style="text-align: left; color: #3f3f3f;" align="left">
+														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: normal;">
 															{!!$data->description!!}
 														</p>
 													</td>
@@ -64,7 +64,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="long-text links-color" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;" align="left">
+													<td class="long-text links-color" style="text-align: left; color: #3f3f3f;" align="left">
 														<p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
 															@foreach($dep_konten as $row)
 																<a href="{{route('link_dep_konten',[base64_encode($row->id)])}}">{{$row->nama}}</a><br>
@@ -89,10 +89,10 @@
 			<tr>
 				<td class="vb-outer" align="center" valign="top">
 					<div class="oldwebkit">
-						<table class="vb-container fullpad" style="border-collapse: separate; border-spacing: 18px; padding-left: 0; padding-right: 0; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
+						<table class="vb-container fullpad" style="border-collapse: separate; width: 100%; background-color: #fff;" border="0" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
-									<td style="background-color: #ffffff;" align="center" valign="top" bgcolor="#ffffff">
+									<td style="" align="center" valign="top" bgcolor="#ffffff">
 									@if($data->status=="free")
 										<a href="{{route('link_content',[base64_encode($data->status),base64_encode($data->id)])}}">
 									@else
@@ -105,7 +105,7 @@
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
 													<tr>
-														<td style="font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; font-weight: normal; padding-left: 14px; padding-right: 14px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" width="auto" height="50">
+														<td style="font-weight: normal; padding-left: 14px; padding-right: 14px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" width="auto" height="50">
 															@if($data->status=="free")
 																Download {{$data->nama}}
 															@else
