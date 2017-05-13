@@ -33,7 +33,7 @@
     		<span class="title">Description</span>
     	</div>
         <div class="content">
-            <p style="margin:0em 0px; margin-bottom: 0px; margin-top: 0px;word-wrap: break-word;white-space: pre;">
+            <p style="margin:20px;word-wrap: break-word;white-space: pre-line;">
 				{!!preg_replace('/((http:\/\/|https:\/\/)\S+)/', '<a href="$1" target="_blank">$1</a>', str_replace("<br>","\n",$data->description))!!}
 			</p>
         </div>
@@ -43,7 +43,7 @@
     		<span class="title">Downloadable Dep {{$data->nama}}</span>
     	</div>
         <div class="content">
-            <p style="margin: 1em 0px; margin-bottom: 0px; margin-top: 0px;">
+            <p style="margin:20px;">
 				@foreach($dep_konten as $row)
 					<a href="{{route('link_dep_konten',[base64_encode($row->id)])}}">{{$row->nama}}</a><br>
 				@endforeach
