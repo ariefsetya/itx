@@ -2,11 +2,11 @@
 
 @section('content')
 
-	<table id="ko_titleBlock_4" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
+	<table id="ko_titleBlock_4" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
-				<td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-					<div class="oldwebkit" style="max-width: 570px;">
+				<td class="vb-outer" align="center" valign="top">
+					<div class="oldwebkit">
 						<table class="vb-container halfpad" style="border-collapse: separate; border-spacing: 9px; padding-left: 9px; padding-right: 9px; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="9" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
@@ -22,12 +22,11 @@
 		</tbody>
 	</table>
 
-	@if($data->status=="free" or $data->status!="free" and Auth::check())
-	<table id="ko_singleArticleBlock_3" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
+	<table id="ko_singleArticleBlock_3" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
-				<td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-					<div class="oldwebkit" style="max-width: 570px;">
+				<td class="vb-outer" align="center" valign="top">
+					<div class="oldwebkit">
 						<table class="vb-container fullpad" style="border-collapse: separate; border-spacing: 18px; padding-left: 0; padding-right: 0; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
@@ -35,6 +34,8 @@
 										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top; max-width: 534px; width: 100%; height: auto;" src="{{$data->photo}}" alt="" width="534" border="0" hspace="0" vspace="0" />
 									</td>
 								</tr>
+
+								@if($data->status=="free" or $data->status!="free" and Auth::check())
 								<tr>
 									<td>
 										<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
@@ -75,6 +76,7 @@
 										</table>
 									</td>
 								</tr>
+								@endif
 							</tbody>
 						</table>
 					</div>
@@ -82,12 +84,11 @@
 			</tr>
 		</tbody>
 	</table>
-	@endif
-	<table id="ko_buttonBlock_5" class="vb-outer" style="background-color: #bfbfbf;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#bfbfbf">
+	<table id="ko_buttonBlock_5" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
-				<td class="vb-outer" style="padding-left: 9px; padding-right: 9px; background-color: #bfbfbf;" align="center" valign="top" bgcolor="#bfbfbf">
-					<div class="oldwebkit" style="max-width: 570px;">
+				<td class="vb-outer" align="center" valign="top">
+					<div class="oldwebkit">
 						<table class="vb-container fullpad" style="border-collapse: separate; border-spacing: 18px; padding-left: 0; padding-right: 0; width: 100%; max-width: 570px; background-color: #fff;" border="0" width="570" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
 								<tr>
@@ -104,7 +105,7 @@
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
 													<tr>
-														<td style="font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; font-weight: normal; padding-left: 14px; padding-right: 14px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" bgcolor="#bfbfbf" width="auto" height="50">
+														<td style="font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; font-weight: normal; padding-left: 14px; padding-right: 14px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" width="auto" height="50">
 															@if($data->status=="free")
 																Download {{$data->nama}}
 															@else
