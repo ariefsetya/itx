@@ -249,6 +249,26 @@ class MemberController extends Controller
 
         return redirect()->route('premium_member',[$id_konten."-".$type]);
     }
+    public function kirim_konten_member($id_user, $id_konten, $type)
+    {
+        $user = \App\User::find($id_user);
+        Mail::to($user->email)
+            ->send(new KirimKonten($user, $id_konten, $type));
+
+        $konten = array();
+        if($type==1){
+            $type="kereta";
+            $konten = \App\Kereta::find($id_konten);
+        }else if($type==2){
+            $type="rute";
+            $konten = \App\Rute::find($id_konten);
+        }else if($type==3){
+            $type="objek";
+            $konten = \App\Objek::find($id_konten);
+        }
+
+        return redirect()->route($type.'_detail',[base64_encode($konten->status),base64_encode($id_konten)]);
+    }
     public function link_dep_konten($id)
     {
         $decoded = base64_decode($id);
