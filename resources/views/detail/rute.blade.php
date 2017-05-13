@@ -11,7 +11,7 @@
 							<tbody>
 								<tr>
 									<td style=" text-align: center;" align="center" bgcolor="#ffffff">
-										{{$data->nama}}
+										<h2>{{$data->nama}}</h2>
 									</td>
 								</tr>
 							</tbody>
@@ -57,7 +57,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f; text-align: left;">
+													<td style="color: #3f3f3f; text-align: left;">
 														<span style="color: #3f3f3f;">
 															 Downloadable Dep {{$data->nama}}
 														</span>
