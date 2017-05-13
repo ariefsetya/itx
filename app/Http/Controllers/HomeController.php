@@ -56,12 +56,17 @@ class HomeController extends Controller
         $data['point'] = 2;
         return view('blogs-rute')->with($data);
     }
-    public function rute_detail($cc)
+    public function rute_detail($status,$cc)
     {
         $hash = base64_decode($cc);
+        $hash_status = base64_decode($status);
         $data['data'] = \App\Rute::find($hash);
-        $data['dep_konten'] = \App\DepContent::where('id_content',$hash)->get();
-        return view('detail.rute')->with($data);
+        if($data['data']->status==$hash_status){
+            $data['dep_konten'] = \App\DepContent::where('id_content',$hash)->get();
+            return view('detail.rute')->with($data);
+        }else{
+            echo "What do you want? :P"
+        }
     }
     public function download_objek($hash)
     {
