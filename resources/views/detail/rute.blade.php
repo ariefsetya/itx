@@ -22,6 +22,11 @@
 		</tbody>
 	</table>
 
+	<div class="panel">
+        <div class="content">
+            <img src="{{$data->photo}}">
+        </div>
+    </div>
 	<table id="ko_singleArticleBlock_3" class="vb-outer" border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
@@ -29,19 +34,6 @@
 					<div class="oldwebkit">
 						<table class="vb-container fullpad" style="border-collapse: separate; width: 100%; background-color: #fff;" border="0" cellspacing="18" cellpadding="0" bgcolor="#ffffff">
 							<tbody>
-								<tr>
-									<td class="links-color" align="left" valign="top" width="100%">
-										<div class="panel">
-							                <div class="heading">
-							                    <span class="title">Selamat Datang di Indonesian Trainz X</span>
-							                </div>
-							                <div class="content">
-							                    <img src="{{$data->photo}}">
-							                </div>
-							            </div>
-									</td>
-								</tr>
-
 								@if($data->status=="free" or $data->status!="free" and Auth::check())
 								<tr>
 									<td>
