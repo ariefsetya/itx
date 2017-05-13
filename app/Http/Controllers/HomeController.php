@@ -65,7 +65,7 @@ class HomeController extends Controller
             $data['dep_konten'] = \App\DepContent::where('id_content',$hash)->get();
             return view('detail.rute')->with($data);
         }else{
-            echo "What do you want? :P"
+            echo "What do you want? :P";
         }
     }
     public function download_objek($hash)
