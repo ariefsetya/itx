@@ -32,7 +32,7 @@
 							<tbody>
 								<tr>
 									<td class="links-color" align="left" valign="top" width="100%">
-										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top; max-width: 534px; width: 100%; height: auto;" src="{{$konten->photo}}" alt="" width="534" border="0" hspace="0" vspace="0" />
+										<img class="mobile-full" style="border: 0px; display: block; vertical-align: top; max-width: 534px; width: 100%; height: auto;" src="{{$data->photo}}" alt="" width="534" border="0" hspace="0" vspace="0" />
 									</td>
 								</tr>
 								<tr>
