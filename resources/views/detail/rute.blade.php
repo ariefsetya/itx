@@ -109,7 +109,7 @@
 																Download {{$data->nama}}
 															@else
 																@if(Auth::check())
-																	Kirim ke Email Saya ( Auth::user()->email )
+																	Kirim ke Email Saya ( {{Auth::user()->email}} )
 																@else
 																	Masuk
 																@endif
