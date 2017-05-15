@@ -114,7 +114,7 @@
 						<td>#{{$row->id}}</td>
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode($row->status),base64_encode($row->id))}}</td>
+				        <td>{{$row->download(base64_encode("rute"),base64_encode($row->id))}}</td>
 						<!-- <td><a href="{{route('delete_rute',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td> -->
 						<td><a href="{{route('premium_member',[$row->id."-2"])}}">Userlist</a></td>
 					</tr>
