@@ -8,6 +8,9 @@
 				<a href="{{route('add_train')}}" class="button">Upload Train</a>
 				<a href="{{route('add_rute')}}" class="button">Upload Rute</a>
 				<a href="{{route('add_objek')}}" class="button">Upload Objek</a>
+				<a href="{{route('add_usercontent')}}" class="button">Upload User Content</a>
+				<a href="{{route('add_depcontent')}}" class="button">Upload Dep Content</a>
+				<a href="{{route('dashboard')}}" class="button">Member Request</a>
 			</div>
 
 			<h4>Downloads Count valid from May 6<sup>rd</sup> 2017</h4>
@@ -20,8 +23,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
-						<th>Publik?</th>
-						<th>Hapus</th>
+						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -31,8 +33,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
-						<td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td>
+						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
 				@if(sizeof($train['lokomotif'])==0)
@@ -49,8 +50,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
-						<th>Publik?</th>
-						<th>Hapus</th>
+						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -60,8 +60,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
-						<td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td>
+						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
 				@if(sizeof($train['kereta'])==0)
@@ -78,8 +77,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
-						<th>Publik?</th>
-						<th>Hapus</th>
+						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -89,8 +87,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
-						<td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td>
+						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
 				@if(sizeof($train['gerbong'])==0)
@@ -106,8 +103,8 @@
 						<th>ID</th>
 						<th>Nama</th>
 						<th>Status</th>
-						<th>Publik?</th>
-						<th>Hapus</th>
+						<!-- <th>Hapus</th> -->
+						<th>Downloads</th>
 						<th>Userlist</th>
 					</tr>
 				</thead>
@@ -117,8 +114,8 @@
 						<td>#{{$row->id}}</td>
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
-						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
-						<td><a href="{{route('delete_rute',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td>
+				        <td>{{$row->download(base64_encode($row->status),base64_encode($row->id))}}</td>
+						<!-- <td><a href="{{route('delete_rute',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td> -->
 						<td><a href="{{route('premium_member',[$row->id."-2"])}}">Userlist</a></td>
 					</tr>
 				@endforeach
@@ -135,9 +132,8 @@
 						<th>ID</th>
 						<th>Nama</th>
 						<th>Status</th>
-						<th>Publik?</th>
 						<th>Downloads</th>
-						<th>Hapus</th>
+						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -146,9 +142,8 @@
 						<td>#{{$row->id}}</td>
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
-						<td>{{$row->open==1?"Ya":"Tidak"}}</td>
 				        <td>{{$row->download(base64_encode($row->id))}}</td>
-						<td><a href="{{route('delete_objek',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td>
+						<!-- <td><a href="{{route('delete_objek',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
 				@if(sizeof($objek)==0)
