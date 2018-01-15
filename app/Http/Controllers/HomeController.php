@@ -251,6 +251,33 @@ class HomeController extends Controller
             return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
         }
     }
+
+    public function link_content($type,$id)
+    {
+        $folder = "";
+        $a = array();
+        $type_decoded = base64_decode($type);
+        $decoded = base64_decode($id);
+        if($type_decoded=="rute"){
+            $a = Rute::find($decoded);
+        }else if($type_decoded=="objek"){
+            $a = Objek::find($decoded);
+        }else if($type_decoded=="kereta"){
+            $a = Kereta::find($decoded);
+        }
+        if($a->status!="free" and Auth::check() or $a->status=="free"){
+            $folder = storage_path() . "/app/content/".$type_decoded."/".$a->status."/".md5($a->id)."/".$a->id.".cdp";
+            // $path = storage_path() . '/app/content/usercontent/' . $folder."/".$a->id.".cdp";
+            $file = File::get($folder);
+            $type = File::mimeType($folder);
+            $response = \Response::make($file);
+            $response->header("Content-Type", $type);
+            $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
+            return $response;
+        }else{
+            return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
+        }
+    }
     function __destruct()
     {
         $log = \App\Logdata::where(array('ip'=>$_SERVER['REMOTE_ADDR'],'ip_port'=>isset($_SERVER['REMOTE_PORT'])?$_SERVER['REMOTE_PORT']:""))->orderBy('id','desc')->first();

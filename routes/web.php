@@ -38,7 +38,7 @@ Route::get('/kirim_konten/{id_user}/{id_konten}/{type}','MemberController@kirim_
 Route::get('/kirim_konten_member/{id_user}/{id_konten}/{type}','MemberController@kirim_konten_member')->name('kirim_konten_member');
 Route::get('/link_dep_konten/{id}','MemberController@link_dep_konten')->name('link_dep_konten');
 Route::get('/link_user_content/{id}','MemberController@link_user_content')->name('link_user_content');
-Route::get('/link_content/{type}/{id}','MemberController@link_content')->name('link_content');
+Route::get('/link_content/{type}/{id}','HomeController@link_content')->name('link_content');
 Route::get('/link_user_objek/{id}','HomeController@link_user_objek')->name('link_user_objek');
 
 Route::get('/anonymousx','HomeController@dashboard')->name('dashboard');
