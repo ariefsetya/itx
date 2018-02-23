@@ -23,6 +23,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
+						<th>Downloads</th>
 						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
@@ -33,7 +34,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
+				        <td>{{$row->download(base64_encode($row->id))}}</td>
 					</tr>
 				@endforeach
 				@if(sizeof($train['lokomotif'])==0)
@@ -50,7 +51,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
-						<!-- <th>Hapus</th> -->
+						<th>Downloads</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -60,6 +61,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
+				        <td>{{$row->download(base64_encode($row->id))}}</td>
 						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
@@ -77,6 +79,7 @@
 						<th>Nama</th>
 						<th>Seri</th>
 						<th>Status</th>
+						<th>Downloads</th>
 						<!-- <th>Hapus</th> -->
 					</tr>
 				</thead>
@@ -87,6 +90,7 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
+				        <td>{{$row->download(base64_encode($row->id))}}</td>
 						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
