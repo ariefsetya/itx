@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use DB;
 class Kereta extends Model
 {
     public function download($id)
