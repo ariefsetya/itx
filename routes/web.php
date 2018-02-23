@@ -40,6 +40,7 @@ Route::get('/link_dep_konten/{id}','HomeController@link_dep_konten')->name('link
 Route::get('/link_user_content/{id}','MemberController@link_user_content')->name('link_user_content');
 Route::get('/link_content/{type}/{id}','HomeController@link_content')->name('link_content');
 Route::get('/link_user_objek/{id}','HomeController@link_user_objek')->name('link_user_objek');
+Route::get('/link_user_kereta/{id}','HomeController@link_user_kereta')->name('link_user_kereta');
 
 Route::get('/anonymousx','HomeController@dashboard')->name('dashboard');
 Route::get('/verification/email/{id}','HomeController@verification_email')->name('verification_email');
