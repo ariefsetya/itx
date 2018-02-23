@@ -179,6 +179,9 @@ class HomeController extends Controller
                 $data['train']['gerbong'] = Kereta::where('jenis','gerbong')->where('id_user',Auth::user()->id)->get();
                 $data['rute'] = Rute::where('id_user',Auth::user()->id)->get();
                 $data['objek'] = Objek::where('id_user',Auth::user()->id)->get();
+                $data['dl_train'] = 0;
+                $data['dl_rute'] = 0;
+                $data['dl_object'] = 0;
 
                 return view('member')->with($data);
             }

@@ -34,7 +34,9 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode($row->id))}}</td>
+						<?php $dln_train = $row->download(base64_encode($row->id)); ?>
+				        <td>{{$dln_train}}</td>
+				        <?php $dl_train+=$dln_train; ?>
 					</tr>
 				@endforeach
 				@if(sizeof($train['lokomotif'])==0)
@@ -61,7 +63,9 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode($row->id))}}</td>
+						<?php $dln_train = $row->download(base64_encode($row->id)); ?>
+				        <td>{{$dln_train}}</td>
+				        <?php $dl_train+=$dln_train; ?>
 						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
@@ -90,7 +94,9 @@
 						<td>{{$row->nama}}</td>
 						<td>{{$row->seri}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode($row->id))}}</td>
+						<?php $dln_train = $row->download(base64_encode($row->id)); ?>
+				        <td>{{$dln_train}}</td>
+				        <?php $dl_train+=$dln_train; ?>
 						<!-- <td><a href="{{route('delete_train',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama." - ".$row->seri}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
@@ -118,7 +124,9 @@
 						<td>#{{$row->id}}</td>
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode("rute"),base64_encode($row->id))}}</td>
+						<?php $dln_rute = $row->download(base64_encode("rute"),base64_encode($row->id)); ?>
+				        <td>{{$dln_rute}}</td>
+				        <?php $dl_rute+=$dln_rute; ?>
 						<!-- <td><a href="{{route('delete_rute',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td> -->
 						<td><a href="{{route('premium_member',[$row->id."-2"])}}">Userlist</a></td>
 					</tr>
@@ -146,7 +154,9 @@
 						<td>#{{$row->id}}</td>
 						<td>{{$row->nama}}</td>
 						<td>{{$row->status}}</td>
-				        <td>{{$row->download(base64_encode($row->id))}}</td>
+						<?php $dln_object = $row->download(base64_encode($row->id)); ?>
+				        <td>{{$dln_object}}</td>
+				        <?php $dl_object+=$dln_object; ?>
 						<!-- <td><a href="{{route('delete_objek',[$row->id])}}" onclick="return confirm('Yakin hapus {{$row->nama}}?')">Hapus</a></td> -->
 					</tr>
 				@endforeach
@@ -157,10 +167,25 @@
 			</table>
 		</div>
 		<div class="cell colspan4">
-			<h1>Last Downloaded</h1>
+			<h1>Total Downloads</h1>
 			<hr>
 			<table class="table striped hovered">
-			
+				<tr>
+					<td>Kereta</td>
+					<td>{{$dl_train}}</td>
+				</tr>
+				<tr>
+					<td>Rute</td>
+					<td>{{$dl_rute}}</td>
+				</tr>
+				<tr>
+					<td>Object</td>
+					<td>{{$dl_object}}</td>
+				</tr>
+				<tr>
+					<td><b>All</b></td>
+					<td><b>{{$dl_train+$dl_rute+$dl_object}}</b></td>
+				</tr>
 			</table>
 		</div>
 	</div>
