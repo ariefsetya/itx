@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Kereta;
 use App\Rute;
 use App\Objek;
+use App\DepContent;
 use \Storage;
 use \File;
 use \Session;
