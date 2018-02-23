@@ -269,21 +269,6 @@ class MemberController extends Controller
 
         return redirect()->route($type.'_detail',[base64_encode($konten->status),base64_encode($id_konten)]);
     }
-    public function link_dep_konten($id)
-    {
-        $decoded = base64_decode($id);
-        $a = DepContent::find($decoded);
-        $folder = md5($a->id);
-
-        $path = storage_path() . '/app/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp";
-        $file = File::get($path);
-        $type = File::mimeType($path);
-        $response = \Response::make($file);
-        $response->header("Content-Type", $type);
-        $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
-        return $response;
-
-    }
     public function link_user_content($id)
     {
         $decoded = base64_decode($id);

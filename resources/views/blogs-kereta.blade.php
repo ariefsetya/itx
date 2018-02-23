@@ -52,7 +52,11 @@
 				        	</tr>
 				        </table>
 				        <div dir="rtl" >
-				        	<a class="text-right button primary" href="{{route($jenis.'_detail',[$search[$i+$x]->status,$search[$i+$x]->id])}}">...Selengkapnya</a>
+				        	@if(Auth::check() and $search[$x]->status!="free" or $search[$x]->status=="free")
+				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$x]->id)])}}">Download</a>
+				        	@else
+				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$x]->id)])}}"><span>Masuk atau Daftar untuk download</span></a>
+				        	@endif
 				        </div>
 			        </div>
 			    </div>

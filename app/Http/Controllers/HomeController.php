@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function lokomotif($cc)
     {
         $data['search'] = \App\Kereta::where('jenis','lokomotif')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
-        $data['query'] = "Lokomotif ".$cc;
+        $data['query'] = "Lokomotif ".strtoupper($cc);
         $data['point'] = 2;
         $data['jenis'] = 'lokomotif';
         return view('blogs-kereta')->with($data);
@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function kereta($cc)
     {
         $data['search'] = \App\Kereta::where('jenis','kereta')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
-        $data['query'] = "Kereta ".$cc;
+        $data['query'] = "Kereta ".strtoupper($cc);
         $data['point'] = 2;
         $data['jenis'] = 'kereta';
         return view('blogs-kereta')->with($data);
@@ -44,7 +44,7 @@ class HomeController extends Controller
     public function gerbong($cc)
     {
         $data['search'] = \App\Kereta::where('jenis','gerbong')->where('open','1')->whereStatus(!'Private')->where('subjenis',$cc)->orderBy('updated_at','desc')->paginate(12);
-        $data['query'] = "Gerbong ".$cc;
+        $data['query'] = "Gerbong ".strtoupper($cc);
         $data['point'] = 2;
         $data['jenis'] = 'gerbong';
         return view('blogs-kereta')->with($data);
@@ -135,7 +135,7 @@ class HomeController extends Controller
         $this->validate($r,[
             'email' => 'required|email|unique:users',
             'phone' => 'required|regex:/(08)[0-9]{9}/|unique:users',
-            'photo' => 'mimes:jpeg,bmp,png,jpg,gif'
+            'photo' => 'required|mimes:jpeg,bmp,png,jpg,gif'
             ]);
 
         $s = new \App\User;
@@ -250,6 +250,44 @@ class HomeController extends Controller
         }else{
             return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
         }
+    }
+    public function link_user_kereta($id)
+    {
+        $decoded = base64_decode($id);
+        $a = Kereta::find($decoded);
+        $folder = md5($a->id);
+
+        if($a->status!="free" and Auth::check() or $a->status=="free"){
+            $path = storage_path() . '/app/content/train/'.$a->status.'/' . $folder."/".$a->id.".cdp";
+            $file = File::get($path);
+            $type = File::mimeType($path);
+            $response = \Response::make($file);
+            $response->header("Content-Type", $type);
+            $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
+            return $response;
+        }else{
+            return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
+        }
+    }
+    public function link_dep_konten($id)
+    {
+        $decoded = base64_decode($id);
+        $a = DepContent::find($decoded);
+        $folder = md5($a->id);
+
+        if($a->status!="free" and Auth::check() or $a->status=="free"){
+
+            $path = storage_path() . '/app/content/depcontent/'.$a->status.'/' . $folder."/".$a->id.".cdp";
+            $file = File::get($path);
+            $type = File::mimeType($path);
+            $response = \Response::make($file);
+            $response->header("Content-Type", $type);
+            $response->header("Content-Disposition",' attachment; filename="'.$a->nama.'.cdp"');
+            return $response;
+        }else{
+            return redirect()->route('home')->with(array('msg'=>'Silahkan masuk atau daftar untuk mendownload konten','title'=>'Authorization Failed'));
+        }
+
     }
 
     public function link_content($type,$id)

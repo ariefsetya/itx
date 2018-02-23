@@ -5,7 +5,6 @@
 
             <ul class="app-bar-menu small-dropdown">
                 <li><a href="{{url('')}}">Beranda</a></li>
-                @if(0)
                 <li data-flexorderorigin="0" data-flexorder="1" class="">
                     <a href="#" class="dropdown-toggle">Kereta</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
@@ -44,7 +43,6 @@
                         </li>
                     </ul>
                 </li>
-                @endif
                 <li data-flexorderorigin="1" data-flexorder="2" class="">
                     <a href="#" class="dropdown-toggle">Rute</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
@@ -53,7 +51,6 @@
                         <li><a href="{{route('rute',['pay'])}}">Payware</a></li>
                     </ul>
                 </li>
-                @if(1)
                 <li data-flexorderorigin="2" data-flexorder="3" class="">
                     <a href="#" class="dropdown-toggle">Objek</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
@@ -62,23 +59,11 @@
                         <li><a href="{{route('objek',['pay'])}}">Payware</a></li>
                     </ul>
                 </li>
-                @endif
 
                 <li data-flexorderorigin="3" data-flexorder="4" class="active-container">
                     <a href="#" class="dropdown-toggle">Community</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
                         <li><a target="_blank" href="https://www.facebook.com/groups/337639216389364/">Indonesian Trainz Simulator</a></li>
-                        <li data-flexorderorigin="2" data-flexorder="3" class="">
-                            <a href="#" class="dropdown-toggle">Friends List</a>
-                            <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
-                            @foreach(\App\User::whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get() as $row)
-                                <li><a href="{{route('gerbong',[$row->subjenis])}}">{{$row->subjenis}}</a></li>
-                            @endforeach
-                            @if(sizeof(\App\User::whereUrl(!null)->whereBrand(!null)->whereStatus('3')->get())==0)
-                            <li><a href="#">Belum ada daftar</a></li>
-                            @endif
-                            </ul>
-                        </li>
                     </ul>
                 </li>
                 <li><a href="{{url('terms')}}">Terms of Service</a></li>
