@@ -69,7 +69,7 @@
 											<a href="{{route('home')}}">
 										@endif
 									@elseif($data->status=="pay")
-										<a href="https://facebook.com/indonesiantrainzx/">
+										<a target="_blank" href="https://facebook.com/indonesiantrainzx/">
 									@endif
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
