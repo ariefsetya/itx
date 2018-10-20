@@ -27,7 +27,6 @@
             <img src="{{$data->photo}}">
         </div>
     </div>
-    @if($data->status=="free" or $data->status!="free" and Auth::check())
     <div class="panel">
     	<div class="heading">
     		<span class="title">Description</span>
@@ -38,6 +37,7 @@
 			</p>
         </div>
     </div>
+    @if($data->status=="free" or $data->status=="plu" and Auth::check())
     <div class="panel">
     	<div class="heading">
     		<span class="title">Downloadable Dep {{$data->nama}}</span>
@@ -62,12 +62,14 @@
 									<td style="" align="center" valign="top" bgcolor="#ffffff">
 									@if($data->status=="free")
 										<a href="{{route('link_content',[base64_encode("rute"),base64_encode($data->id)])}}">
-									@else
+									@elseif($data->status=="plu")
 										@if(Auth::check())
 											<a href="{{route('kirim_konten_member',[Auth::id(),$data->id,2])}}">
 										@else
 											<a href="{{route('home')}}">
 										@endif
+									@elseif($data->status=="pay")
+										<a href="https://facebook.com/indonesiantrainzx/">
 									@endif
 											<table class="mobile-full" border="0" cellspacing="0" cellpadding="0" align="center">
 												<tbody>
@@ -75,12 +77,14 @@
 														<td style="font-weight: normal; padding-left: 14px; padding-right: 14px; background-color: #bfbfbf; border-radius: 4px;" align="center" valign="middle" width="auto" height="50">
 															@if($data->status=="free")
 																Download {{$data->nama}}
-															@else
+															@elseif($data->status=="plu")
 																@if(Auth::check())
 																	Kirim ke Email Saya ( {{Auth::user()->email}} )
 																@else
 																	Masuk
 																@endif
+															@elseif($data->status=="pay")
+																Hubungi Kami
 															@endif
 														</td>
 													</tr>
