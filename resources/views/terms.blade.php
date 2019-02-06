@@ -7,23 +7,28 @@
 <ol type="1">
 <li>Indonesian Trainz X adalah website portal penyedia konten Kereta Simulator Indonesia (Trainz Simulator).</li>
 <li>Indonesian Trainz X menerima pendaftaran untuk PLU Member dengan data yang valid berikut ini.
-<ol type="a">
-<li>Nama</li>
-<li>E-Mail</li>
-<li>Nomor Telepon</li>
-<li>Facebook Username</li>
-<li>Foto</li>
-<li>Pernyataan</li>
-<li>Data Trainz yang terinstall</li>
-<li>Nama dan Website Creator/Reskiner (jika ada) apabila yang bersangkutan merupakan Creator/Reskiner.</li>
-</ol>
+	<ol type="a">
+		<li>Nama</li>
+		<li>E-Mail</li>
+		<li>Nomor Telepon</li>
+		<li>Facebook Username</li>
+		<li>Foto</li>
+		<li>Pernyataan</li>
+		<li>Data Trainz yang terinstall</li>
+		<li>Nama dan Website Creator/Reskiner (jika ada) apabila yang bersangkutan merupakan Creator/Reskiner.</li>
+	</ol>
 </li>
 <li>PLU Member adalah user yang diterima oleh sistem ITX dengan data-data yang valid pada saat pendaftaran.</li>
 <li>PLU Member akan ditolak secara otomatis apabila data yang diberikan tidak valid.</li>
 <li>PLU Member yang sudah mendaftar akan mendapatkan konfirmasi diterima/ditolak melalui email.</li>
 <li>PLU Member berhak mendapatkan konten-konten yang bersifat PLU atau beta tester yang dikirim melalui email.</li>
 <li>Konten ITX adalah keseluruhan konten yang ada di website ITX baik yang bersifat Freeware, PLU atau Payware.</li>
-<li>Konten ITX dilarang untuk di konvert ke Trainz Android.</li>
+<li>Konten ITX diperbolehkan untuk di konvert ke Trainz Android dengan syarat sebagai berikut (khusus Trainz Android) :
+	<ol type="a">
+		<li>Cantumkan nama konten Indonesian Trainz X yang pakai di rute pada postingan Facebook/IG/Twitter dll.</li>
+		<li>Tag ke Fanspage <a href="https://www.facebook.com/indonesiantrainzx/" target="_blank">Indonesian Trainz X</a> sebagai tanda penggunaan konten secara sah (baca: legal).</li>
+	</ol>
+</li>
 <li>Konten ITX dilarang untuk dijual kembali dalam bentuk apapun.</li>
 <li>Konten ITX diperbolehkan untuk di reskin maupun diedit, akan tetapi dilarang untuk di upload ulang dalam bentuk CDP/CDP2.</li>
 <li>Konten ITX yang bersifat Freeware atau PLU diperbolehkan untuk digunakan dalam Rute Payware/PLU dengan syarat pihak ITX mendapatkan Rute tersebut. ( baca : kirim ke <a href="mailto:itx.officialmail@gmail.com">itx.officialmail@gmail.com</a> )</li>

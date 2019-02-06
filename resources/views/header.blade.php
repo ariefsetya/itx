@@ -64,6 +64,7 @@
                     <a href="#" class="dropdown-toggle">Community</a>
                     <ul class="d-menu" data-role="dropdown" data-no-close="true" style="display: none;">
                         <li><a target="_blank" href="https://www.facebook.com/groups/337639216389364/">Indonesian Trainz Simulator</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/groups/1926794864242821/">TRAINZ SIMULATOR ALL INDONESIA (PC & ANDROID)</a></li>
                     </ul>
                 </li>
                 <li><a href="{{url('terms')}}">Terms of Service</a></li>
