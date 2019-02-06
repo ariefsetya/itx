@@ -71,6 +71,12 @@
 						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (11).jpg"></div>
 						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (12).jpg"></div>
 					</div>
+					<div class="row cells4">
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (13).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (14).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (15).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (16).jpg"></div>
+					</div>
 				</div>
 			</div>
 		</div>
