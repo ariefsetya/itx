@@ -53,13 +53,17 @@
 			<hr>
 			<div class="">
 				<div class="grid">
-					<div class="row cells2">
-						<div class="cell"><img class="block-shadow-impact" src="/storage/images/home (1).jpg"></div>
-						<div class="cell"><img class="block-shadow-impact" src="/storage/images/home (2).jpg"></div>
+					<div class="row cells4">
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (1).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (2).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (3).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (4).jpg"></div>
 					</div>
-					<div class="row cells2">
-						<div class="cell"><img class="block-shadow-impact" src="/storage/images/home (4).jpg"></div>
-						<div class="cell"><img class="block-shadow-impact" src="/storage/images/home (3).jpg"></div>
+					<div class="row cells4">
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (5).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (6).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (7).jpg"></div>
+						<div class="cell"><img class="block-shadow-impact" src="/storage/images/gallery (8).jpg"></div>
 
 					</div>
 				</div>
