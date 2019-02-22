@@ -34,7 +34,7 @@
                     <span class="title">Selamat Datang di Indonesian Trainz X</span>
                 </div>
                 <div class="content">
-                    <img src="{{Storage::url('images/banner.jpg')}}">
+                    <img src="{{Storage::url('images/banner.png')}}">
                 </div>
             </div>
             <hr>
