@@ -32,7 +32,7 @@
     		<span class="title">Description</span>
     	</div>
         <div class="content" style="padding:20px;">
-            <p style="ord-wrap: break-word;white-space: pre-line;">
+            <p style="word-wrap: break-word;white-space: pre-line;">
 				{!!preg_replace('/((http:\/\/|https:\/\/)\S+)/', '<a href="$1" target="_blank">$1</a>', str_replace("<br>","\n",$data->description))!!}
 			</p>
         </div>

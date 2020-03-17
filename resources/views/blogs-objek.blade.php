@@ -47,7 +47,7 @@
 				        	@if(Auth::check() and $search[$x]->status!="free" or $search[$x]->status=="free")
 				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$x]->id)])}}">Download</a>
 				        	@else
-				        	<a class="text-right button primary" href="{{route('link_user_objek',[base64_encode($search[$x]->id)])}}"><span>Masuk atau Daftar untuk download</span></a>
+				        	<a class="text-right button primary" target="_blank" href="https://facebook.com/indonesiantrainzx/"><span>Hubungi kami</span></a>
 				        	@endif
 				        </div>
 			        </div>
